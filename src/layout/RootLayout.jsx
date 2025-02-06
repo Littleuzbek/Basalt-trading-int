@@ -29,8 +29,10 @@ export default function RootLayout() {
     if (allPages) {
       setTitle(allPages?.title);
     }
+
+    window.scrollTo(0, 0);
+    
   }, [location]);
-  console.log(location);
   return (
     <>
       <div className="main">
