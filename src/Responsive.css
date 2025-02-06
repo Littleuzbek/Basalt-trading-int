@@ -256,3 +256,80 @@
         font-size: 35px;
     }
 }
+
+@media (min-width: 2000px) {
+    .nav-container{
+        height: 100px;
+    }
+
+    .nav-logo{
+        height: 100px !important;
+    }
+    
+    .nav-item {
+        height: 100% !important;
+    }
+    
+    .service-details-list > li > a,
+    .nav-item > p{
+        font-size: 26px !important;
+    }
+    
+    .extra-info > span > div > h6,
+    .contact-service > h3{
+        font-size: 32px !important;
+    }
+
+    .about > span > div > h3,
+    .before-footer > h5,
+    .service-details-info > h3,
+    .page-title > h5{
+        font-size: 44px !important;
+    }
+    
+    .contact-form > textarea,
+    .contact-form > input,
+    .contactText,
+    .about > p,
+    .about > div,
+    .footer_item-1,
+    .before-footer > p,
+    .before-footer > .btn,
+    .extra-info > span > div,
+    .service-details-info > ul,
+    .service-details-info > p,
+    .contact-service > span > p,
+    .contact-service > p,
+    .page-title > p{
+        font-size: 22px !important;
+    }
+
+    .home-map > iframe{
+        height: 600px;
+    }
+
+    .before-footer-container{
+        height: 500px;
+    }
+
+    .before-footer{
+        height: 250px;
+    }
+    
+    .before-footer > .btn {
+        bottom: 0;
+        left: 40%;
+        right: 40%;
+        position: absolute;
+    }
+
+    .contactIcon {
+        width: 70px;
+        height: 70px !important;
+    }
+
+    .contactIcon > svg{
+        width: 30px;
+        height: 30px;
+    }
+}
