@@ -46,7 +46,7 @@ export default function Footer() {
         
         <div className="footer_inner-2">
            <div className="footer_top-div"/>
-           <p>© 2025 Website Name, All Rights Reserved.</p>
+           <p>© 2025 BASALT TRADING INT, All Rights Reserved.</p>
         </div>
 
        </div>
