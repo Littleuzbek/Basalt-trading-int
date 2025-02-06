@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ContactService from "../components/ContactService";
 import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router";
 import {data as options} from "../assets/data"
@@ -10,7 +10,6 @@ export default function Home() {
     useEffect(()=>{
         if(location.pathname === "/home" || location.pathname === "home"){
             navigate("/home/contruction-engineering")
-            setTitle("Construction & Engineering")
         }
     },[location])
   
