@@ -47,7 +47,7 @@ h3::selection{
   justify-content: center;
   position: relative;
   background-image: url("./assets/entrance1.jpg");
-  background-position: center bottom;
+  background-position: center 60%;
   background-size: cover;
 }
 
