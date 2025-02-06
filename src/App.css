@@ -51,14 +51,15 @@ h3::selection{
   background-size: cover;
 }
 
-/* .page-title-container::before{
+.page-title-container::before{
   content: "";
   width: 100%;
   height: 100%;
   position: absolute;
+  background-color: rgba(0, 0, 0, .5);
   top: 0;
   left: 0;
-} */
+}
 
 /* .page-title-container::before {
   content: "";
