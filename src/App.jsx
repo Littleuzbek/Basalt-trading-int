@@ -13,13 +13,17 @@ import {loaderFn} from "./components/ServiceDetailsInfo"
 import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 
+function HydrateFallback() {
+  return <p>Loading...</p>;
+}
+
 function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route path="/home" element={<Home/>}>
-          <Route path='/home/:id' element={<ServiceDetailsInfo />} loader={loaderFn}/>
+          <Route path='/home/:id' element={<ServiceDetailsInfo />} loader={loaderFn} HydrateFallback={HydrateFallback}/>
         </Route>
         <Route path="about-us" element={<AboutUs />} />
         <Route path="contact-us" element={<ContactUs />} />

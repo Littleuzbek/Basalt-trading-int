@@ -8,6 +8,15 @@
         align-items: center;
         position: relative;
     }
+
+    .page-title-container > video{
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .service-details-page{
+        padding: 50px 0 100px;
+    }
     
     .nav{
         display: none !important;

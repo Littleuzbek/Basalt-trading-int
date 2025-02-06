@@ -30,16 +30,16 @@ export default function RootLayout() {
       setTitle(allPages?.title);
     }
   }, [location]);
+  console.log(location);
   return (
     <>
       <div className="main">
         <Navigation />
         <div className="page-title-container">
-          <video src={lava} autoPlay loop muted preload="auto"></video>
           <div className="page-title">
-            <h5>{title}</h5>
+            <h5>Supplier Company</h5>
             <p>
-              <Link to="/home" id="home">Basalt Export Trading INT</Link> {">"} {title}
+              <Link to="/home" id="home">Basalt Export Trading INT</Link> {location?.pathname === "/home/contruction-engineering" || "> " + title}
             </p>
           </div>
         </div>
