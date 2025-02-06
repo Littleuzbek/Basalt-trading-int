@@ -1,0 +1,60 @@
+.about-page {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    gap: 3%;
+    padding: 100px 0;
+}
+
+.about {
+    width: 48%;
+}
+
+.about-img {
+    width: 49%;
+}
+
+.about > span {
+    display: flex;
+    gap: 10px;
+    margin: 0 0 40px;
+}
+
+.about > span > svg {
+    width: 80px;
+    height: 80px;
+}
+
+.about > span > div {
+    display: flex;
+    align-items: center;
+}
+
+/* .about > span > div > h5 {
+    font-size: 24px;
+    color: var(--orange);
+    font-weight: 500;
+} */
+
+.about > span > div > h3 {
+    font-size: 36px;
+}
+
+.about > p {
+    margin: 15px 0;
+}
+
+.about > div{
+    padding: 0 0 20px 0;
+}
+
+.about > div > ul{
+    padding: 0 0 0 20px;
+}
+
+.about-img > img {
+    width: 100%;
+    border-radius: 20px 0 20px 0;
+    position: sticky;
+    top: 70px
+}

@@ -1,0 +1,47 @@
+.service-details-info,
+.service-details-info > img {
+  width: 100%;
+}
+
+.service-details-info > h3 {
+    font-size: 32px;
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.service-details-info > p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.service-details-info > ul {
+    margin: 0 0 0 20px;
+}
+
+.extra-info {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0 0 0;
+}
+
+.extra-info > span {
+    width: 50%;
+    display: flex;
+    gap: 20px;
+    margin: 0 0 20px;
+}
+
+.extra-info > span > img {
+    min-width: 70px !important;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border: .5px solid rgb(199, 199, 199);
+}
+
+.extra-info > span > div > h6{
+    font-size: 20px;
+    font-weight: 600;
+}

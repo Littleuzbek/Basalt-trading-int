@@ -1,0 +1,132 @@
+:root{
+    --border-color: rgb(199, 199, 199);
+}
+
+.contact-page{
+    width: 75%;
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5%;
+}
+
+.contact-info {
+    width: 32%;
+    padding: 20px 15px;
+    border: .5px solid var(--border-color);
+}
+
+.contact-form {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.contact-info > h5{
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.contact-info > h3 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.contact-category{
+    display: flex;
+    gap: 10px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.contact-category:nth-last-child(1){
+    justify-content: center;
+    border: none;
+    padding: 20px 0 0 0;
+    cursor: pointer;
+}
+
+.contactIcon{
+    min-width: 45px !important;
+    height: 45px;
+    border-radius: 50%;
+    border: .5px solid var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactIcon > svg{
+    color: var(--orange);
+}
+
+.social {
+    border: 1px solid var(--border-color);
+    transition: .3s;
+}
+
+.social > svg {
+    color: black;
+}
+
+.social:hover {
+    border: none;
+    background-color: var(--orange);
+}
+
+.social:hover > svg {
+    color: white !important;
+}
+
+.contact-form > input{
+    height: 50px;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.contact-form > input:focus,
+.contact-form > textarea:focus{
+    border: 1px solid var(--orange);
+    outline: none;
+}
+
+.contact-form > input:nth-child(-n+4) {
+    width: 48%;
+}
+
+.contact-form > textarea{
+    width: 100%;
+    height: 56%;
+    padding: 10px;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+    font-size: 17px;
+}
+
+.contact-form > input:nth-last-child(1){
+    width: 25%;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    background-color: var(--orange);
+    border: none;
+    transition: .3s;
+}
+
+.contact-form > input:nth-last-child(1):hover{
+    background-color: var(--blue-dark);
+    color: var(--light);
+}
+
+.location{
+    width: 100%;
+    height: 600px;
+    margin: 100px 0 0 0;
+}
