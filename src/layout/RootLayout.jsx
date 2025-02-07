@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, Outlet, useLocation, useNavigate } from "react-router";
 import {data as servicePage} from "../assets/data"
-import lava from "../assets/lava2.mp4"
 import Footer from "../components/Footer"
 import Navigation from "../components/Navigation"
 
@@ -25,12 +24,16 @@ export default function RootLayout() {
     ?.find((page) =>
       location.pathname?.includes(page.link)
     );
-    
+
     if (allPages) {
       setTitle(allPages?.title);
     }
 
-    window.scrollTo(0, 0);
+    // console.log(title);
+    // console.log(location.pathname);
+    // if(allPages?.link === "/"){
+    //   window.scrollTo(0, 0);
+    // }
     
   }, [location]);
   return (
@@ -41,7 +44,8 @@ export default function RootLayout() {
           <div className="page-title">
             <h5>Supplier Company</h5>
             <p>
-              <Link to="/home" id="home">Basalt Export Trading INT</Link> {location?.pathname === "/home/contruction-engineering" || "> " + title}
+              <Link to="/home" id="home">Basalt Export Trading INT</Link> 
+              {location?.pathname.includes("/home") || location?.pathname.includes("/product") || " > " + title}
             </p>
           </div>
         </div>

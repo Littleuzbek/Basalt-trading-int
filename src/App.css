@@ -145,6 +145,7 @@ h3::selection{
   color: inherit;
   display: block;
   overflow: hidden;
+  text-transform: capitalize;
 }
 
 .service-details-list > li > a.active{

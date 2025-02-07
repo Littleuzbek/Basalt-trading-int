@@ -1,6 +1,6 @@
 import "./Navigation.css";
 import { useState } from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import logo from "../assets/logoNew.png";
 import { LuMenu } from "react-icons/lu";
 import { IoMdClose } from "react-icons/io";
@@ -10,6 +10,7 @@ import { CiCircleMinus } from "react-icons/ci";
 export default function Navigation() {
   const [menu, setMenu] = useState(false);
   const [subMenu, setSubMenu] = useState(false);
+  const navigate = useNavigate();
 
   const closeMenu = () => {
     setMenu(false)
@@ -18,7 +19,7 @@ export default function Navigation() {
   return (
     <>
       <div className="nav-container">
-        <Link to="/home/contruction-engineering" className="nav-logo-sm">
+        <Link to="/home/basalt-trading-int" className="nav-logo-sm">
           <img src={logo} alt="Logo" />
         </Link>
 
@@ -32,9 +33,9 @@ export default function Navigation() {
 
         {menu && <div className="menu-container">
           <div className="menu">
-            <NavLink to="/home" className="menu-item" onClick={() => closeMenu()}>
+            <Link to="/home/basalt-trading-int" className="menu-item" onClick={() => closeMenu()}>
               Home
-            </NavLink>
+            </Link>
             <NavLink to="/about-us" className="menu-item" onClick={() => closeMenu()}>
               About Us
             </NavLink>
@@ -58,11 +59,11 @@ export default function Navigation() {
         </div>}
 
         <div className="nav">
-          <Link to="/home/contruction-engineering" className="nav-logo">
+          <Link to="/home/basalt-trading-int" className="nav-logo">
             <img src={logo} alt="Logo" />
           </Link>
           <div className="nav-item-container">
-            <NavLink to="/home/contruction-engineering" className="nav-item">
+            <NavLink to="/home/basalt-trading-int" className="nav-item">
               <p>Home</p>
               <span></span>
             </NavLink>
@@ -70,13 +71,15 @@ export default function Navigation() {
               <p>About Us</p>
               <span></span>
             </NavLink>
-            <div className="nav-item nav-products">
-              <p>Products</p>
+            <div className="nav-item nav-products" onClick={()=>{navigate("/products")}}>
+              <NavLink to="/products">Products</NavLink>
               <span></span>
-              <div className="products-drop-down">
-                <div>Product1</div>
-                <div>Product2</div>
-                <div>Product3</div>
+              <div className="products-drop-down" onClick={(e)=>e.stopPropagation()}>
+                <Link to="/products/basalt-roving">БАЗАЛЬТОВЫЙ РОВИНГ</Link>
+                <Link to="/products/basalt-fiber">БАЗАЛЬТОВЫЙ фибра</Link>
+                <Link to="/products/basalt-geogrid">БАЗАЛЬТОВЫЙ геосетка</Link>
+                <Link to="/products/basalt-composite">БАЗАЛЬТОВЫЙ арматура</Link>
+                <Link to="/products/basalt-pipe">БАЗАЛЬТОВЫЙ труба</Link>
               </div>
             </div>
             <NavLink to="contact-us" className="nav-item">

@@ -9,7 +9,7 @@ export default function Home() {
 
     useEffect(()=>{
         if(location.pathname === "/home" || location.pathname === "home"){
-            navigate("/home/contruction-engineering")
+            navigate("/home/basalt-trading-int")
         }
     },[location])
   
@@ -20,7 +20,7 @@ export default function Home() {
           <div className="service-details-left">
             <ul className="service-details-list">
               {options?.map((page) => (
-                <li onClick={() => setTitle(page.title)} key={page?.link}>
+                <li key={page?.link}>
                   <NavLink to={`/home/${page?.link}`}>
                     {page?.title}
                   </NavLink>

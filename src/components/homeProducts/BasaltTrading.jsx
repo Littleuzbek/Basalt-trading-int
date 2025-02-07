@@ -1,16 +1,16 @@
-import "./ServiceDetailsInfo.css";
-import gloves from "../assets/gloves.png";
-import cog from "../assets/cog.png";
-import tire from "../assets/tire.png";
-import plant from "../assets/plant.png";
-import {data as services} from '../assets/data'
-import { useLoaderData } from "react-router";
+import "./ServiceDetails.css";
+import gloves from "../../assets/gloves.png";
+import cog from "../../assets/cog.png";
+import tire from "../../assets/tire.png";
+import plant from "../../assets/plant.png";
+import {data as product} from '../../assets/data'
 
-export default function ServiceDetailsInfo() {
-  const data = useLoaderData();
+export default function BasaltTrading() {
   return (
     <div className="service-details-info">
-      <img src={data?.img} alt="" />
+      <div className="img">
+        <img src={product?.[0]?.img} loading="lazy" style={{minWidth: "100%"}} alt="" />
+      </div>
 
       <h3>Basalt Export Trading INT</h3>
 
@@ -38,7 +38,7 @@ export default function ServiceDetailsInfo() {
 
       <div className="extra-info">
         <span>
-          <img src={tire} alt="" />
+          <img src={tire} alt="" loading="lazy"/>
           <div>
             <h6>Высокие стандарты качества</h6>
             <p>
@@ -47,7 +47,7 @@ export default function ServiceDetailsInfo() {
           </div>
         </span>
         <span>
-          <img src={cog} alt="" />
+          <img src={cog} alt="" loading="lazy"/>
           <div>
             <h6>Надежные поставки</h6>
             <p>
@@ -56,7 +56,7 @@ export default function ServiceDetailsInfo() {
           </div>
         </span>
         <span>
-          <img src={gloves} alt="" />
+          <img src={gloves} alt="" loading="lazy"/>
           <div>
             <h6>Индивидуальные решения</h6>
             <p>
@@ -65,7 +65,7 @@ export default function ServiceDetailsInfo() {
           </div>
         </span>
         <span>
-          <img src={plant} alt="" />
+          <img src={plant} alt="" loading="lazy"/>
           <div>
             <h6>Экологичность и устойчивость</h6>
             <p>
@@ -81,10 +81,4 @@ export default function ServiceDetailsInfo() {
 
     </div>
   );
-}
-
-export const loaderFn = async ({params}) => {
-  const {id} = params;
-  const data = services?.find((page)=> id?.includes(page.link));
-  return data
 }
