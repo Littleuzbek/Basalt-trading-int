@@ -52,6 +52,11 @@
     padding: 0 0 0 20px;
 }
 
+.about > div > ul > li::selection{
+    background-color: var(--orange-dark);
+  color: var(--white);
+}
+
 .about-img > img {
     width: 100%;
     border-radius: 20px 0 20px 0;
