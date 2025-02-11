@@ -10,9 +10,9 @@ export default function Footer() {
             <h4>
                 EMAIL ADDRESS
             </h4>
-            <p>
-                HERE MUST BE YOUR EMAIL ADDRESS
-            </p>
+            <a href="/" className="Footer_info-style">
+            info@biet.uz
+            </a>
            </div>
 
            <div className="footer_item-1">
@@ -20,7 +20,7 @@ export default function Footer() {
                 PHONE NUMBER
             </h4>
             <p>
-                HERE MUST BE YOUR PHONE NUMBER
+                Soon...
             </p>
            </div>
 
@@ -29,7 +29,7 @@ export default function Footer() {
                 INSTAGRAM
             </h4>
             <p>
-                INSTAGRAM
+                Soon...
             </p>
            </div>
 
@@ -38,7 +38,7 @@ export default function Footer() {
                 FACEBOOK
             </h4>
             <p>
-                FACEBOOK
+                Soon...
             </p>
            </div>
 
@@ -46,7 +46,7 @@ export default function Footer() {
         
         <div className="footer_inner-2">
            <div className="footer_top-div"/>
-           <p>© 2025 BASALT TRADING INT, All Rights Reserved.</p>
+           <p>© 2025 Basalt International Export Trading, All Rights Reserved.</p>
         </div>
 
        </div>

@@ -20,7 +20,7 @@ export default function ContactUs() {
           </div>
           <div className="contactText">
             <p>Don't hesitate to contact us!</p>
-            <p>+998 (90) 123-45-67</p>
+            <p>Soon...</p>
           </div>
         </span>
         <span className="contact-category">
@@ -29,7 +29,7 @@ export default function ContactUs() {
           </div>
           <div className="contactText">
             <p>Email Address:</p>
-            <p>Supportteam@email.com</p>
+            <a href="/" className="ContactUs_info-style">info@biet.uz</a>
           </div>
         </span>
         <span className="contact-category">
@@ -37,8 +37,8 @@ export default function ContactUs() {
             <FaLocationDot />
           </div>
           <div className="contactText">
-            <p>Company Headquarters:</p>
-            <p>321 Car World, 2nd Breaking Str, Newyork ,USA 10002.</p>
+            <p>Company Location:</p>
+            <p>Ташкент город Ц1  БИЙ 45а </p>
           </div>
         </span>
         <span className="contact-category">

@@ -44,7 +44,7 @@ export default function RootLayout() {
           <div className="page-title">
             <h5>Supplier Company</h5>
             <p>
-              <Link to="/home" id="home">Basalt Export Trading INT</Link> 
+              <Link to="/home" id="home">Basalt International Export Trading</Link> 
               {location?.pathname.includes("/home") || location?.pathname.includes("/product") || " > " + title}
             </p>
           </div>

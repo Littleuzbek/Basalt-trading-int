@@ -57,11 +57,11 @@ export default function Home() {
 
       <div className="before-footer-container">
         <div className="before-footer">
-          <h5>25+ years of experiences for give you better results.</h5>
+          <h5>5+ years of experiences for give you better results.</h5>
           <p>
-            There are many variations of passages of Lorem Ipsum but majority
+            {/* There are many variations of passages of Lorem Ipsum but majority
             have suffered alteration form by injected humour or randomised
-            words.
+            words. */}
           </p>
           <Link to="/contact-us" className="btn">CONTACT US TODAY</Link>
         </div>

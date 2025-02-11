@@ -1,6 +1,6 @@
 import "../components/AboutUs.css";
 import { FiCodesandbox } from "react-icons/fi";
-import aboutIMG from "../assets/about-img.jpg";
+import aboutIMG from "../assets/about-img.png";
 
 export default function AboutUs() {
   return (

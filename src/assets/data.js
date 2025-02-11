@@ -8,7 +8,7 @@ import details6 from "../assets/products/pipe.png";
 export const data = [
     {
       link: "basalt-trading-int",
-      title: "BASALT TRADING INT",
+      title: "BASALT INTERNATIONAL EXPORT TRADING",
       img: details,
     },
     {

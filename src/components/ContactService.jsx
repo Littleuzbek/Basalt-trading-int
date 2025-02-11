@@ -13,13 +13,13 @@ export default function ContactService() {
       <span>
         <IoCall />
         <p>Позвоните нам: </p>
-        <p>+998 90 123 45 67</p>
+        <p>Soon...</p>
       </span>
 
       <span>
         <MdOutlineMail />
         <p>Напишите нам: </p>
-        <p>mail@example.com</p>
+        <a href="/" className="Footer_info-style">info@biet.uz</a>
       </span>
     </>
   );
