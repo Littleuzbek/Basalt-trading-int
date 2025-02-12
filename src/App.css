@@ -287,6 +287,7 @@ h3::selection{
   justify-content: center;
   align-items: center;
   background-color: var(--orange);
+  cursor: pointer;
 }
 
 .contact-button > svg{
