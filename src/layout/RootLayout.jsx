@@ -37,6 +37,7 @@ export default function RootLayout() {
     // }
     
   }, [location]);
+  console.log(location);
   return (
     <>
       <div className="main">
@@ -54,7 +55,7 @@ export default function RootLayout() {
         <Outlet />
 
         <Footer />
-        <FixedBtn />
+        {location.pathname?.includes("/contact-us") || <FixedBtn />}
       </div>
     </>
   );
