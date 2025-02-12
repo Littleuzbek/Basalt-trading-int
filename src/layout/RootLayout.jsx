@@ -3,6 +3,7 @@ import { Link, Outlet, useLocation, useNavigate } from "react-router";
 import {data as servicePage} from "../assets/data"
 import Footer from "../components/Footer"
 import Navigation from "../components/Navigation"
+import FixedBtn from "../components/FixedBtn";
 
 export default function RootLayout() {
   const [title, setTitle] = useState("");
@@ -53,6 +54,7 @@ export default function RootLayout() {
         <Outlet />
 
         <Footer />
+        <FixedBtn />
       </div>
     </>
   );
