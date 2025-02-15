@@ -1,4 +1,4 @@
-import details from "../assets/image1.png";
+import details from "../assets/image1.jpg";
 import details2 from "../assets/products/roving.png";
 import details3 from "../assets/products/fiber.png";
 import details4 from "../assets/products/geogrid.png";
