@@ -10,7 +10,7 @@ import { langs } from "../assets/data";
 
 export default function Navigation() {
   const [menu, setMenu] = useState(false);
-  const [subMenu, setSubMenu] = useState({products: false, lang: false});
+  const [subMenu, setSubMenu] = useState(false);
   const {pathname} = useLocation();
   const navigate = useNavigate();
   const {lang} = useParams();
