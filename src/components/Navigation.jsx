@@ -1,5 +1,5 @@
 import "./Navigation.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate, useParams } from "react-router";
 import logo from "../assets/logoNew.png";
 import { LuMenu } from "react-icons/lu";
@@ -16,10 +16,10 @@ export default function Navigation() {
   const {lang} = useParams();
   const nextLang =  decodeURIComponent(pathname).replace(lang, langs.find((e)=>e.lang !== lang)?.lang);
   
-  const closeMenu = () => {
+  useEffect(()=>{
     setMenu(false)
     setSubMenu(false)
-  }
+  },[pathname])
 
   const langHandler = (newLang) => {
     localStorage.setItem("lang", newLang)
@@ -42,15 +42,15 @@ export default function Navigation() {
 
         {menu && <div className="menu-container">
           <div className="menu">
-            <NavLink to={`/${lang}/home`}  className="menu-item" onClick={() => closeMenu()}>
+            <NavLink to={`/${lang}/home`}  className="menu-item">
               Home
             </NavLink>
-            <NavLink to={`/${lang}/about-us`} className="menu-item" onClick={() => closeMenu()}>
+            <NavLink to={`/${lang}/about-us`} className="menu-item">
               About Us
             </NavLink>
             <div 
               className={`menu-item nav-products-sm ${pathname === `/${lang}/products` ? "active" : ""}`}  
-              onClick={()=>{closeMenu(); navigate(`/${lang}/products`)}}
+              onClick={()=>{navigate(`/${lang}/products`)}}
             >
               <p>Products</p>
               {subMenu ? (
@@ -59,35 +59,35 @@ export default function Navigation() {
                 <CiCirclePlus onClick={(e) => {e.stopPropagation(); setSubMenu(!subMenu)}} />
               )}
               {subMenu && <div className="sub-menu">
-                <span  onClick={(e)=> {e.stopPropagation(); closeMenu();}}>
+                <span  onClick={(e)=> {e.stopPropagation();}}>
                   <NavLink to={`/${lang}/products/basalt-roving`}>Basalt Roving</NavLink>
                 </span>
-                <span  onClick={(e)=> {e.stopPropagation(); closeMenu();}}>
+                <span  onClick={(e)=> {e.stopPropagation();}}>
                   <NavLink to={`/${lang}/products/basalt-fiber`}>Basalt Fiber</NavLink>
                 </span>
-                <span onClick={(e)=> {e.stopPropagation(); closeMenu();}}>
+                <span onClick={(e)=> {e.stopPropagation();}}>
                   <NavLink to={`/${lang}/products/basalt-geogrid`}>Basalt Geogrid</NavLink>
                 </span>
-                <span onClick={(e)=> {e.stopPropagation(); closeMenu();}}>
+                <span onClick={(e)=> {e.stopPropagation();}}>
                   <NavLink to={`/${lang}/products/basalt-composite`}>Basalt Composite Reinforcement</NavLink>
                 </span>
-                <span onClick={(e)=> {e.stopPropagation(); closeMenu();}}>
+                <span onClick={(e)=> {e.stopPropagation();}}>
                   <NavLink to={`/${lang}/products/basalt-pipe`}>Basalt Pipe</NavLink>
                 </span>
               </div>}
             </div>
-            <NavLink to={`/${lang}/contact-us`} className="menu-item" onClick={() => closeMenu()}>
+            <NavLink to={`/${lang}/contact-us`} className="menu-item">
               Contact Us
             </NavLink>
             <div  className="menu-item nav-products-sm">
               <Link
                 to={lang === "en" ? "": nextLang}
-                onClick={()=>{closeMenu(); langHandler("en")}}
+                onClick={()=>{langHandler("en")}}
               >
                 <img src={langs[0].img} alt="" /> en </Link>
               <Link 
                 to={lang === "ru" ? "": nextLang}
-                onClick={()=>{closeMenu(); langHandler("ru")}}>
+                onClick={()=>{langHandler("ru")}}>
                   <img src={langs[1].img} alt="" /> ru
               </Link>
             </div>
