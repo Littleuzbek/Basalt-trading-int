@@ -10,7 +10,7 @@ import { langs } from "../assets/data";
 
 export default function Navigation() {
   const [menu, setMenu] = useState(false);
-  const [subMenu, setSubMenu] = useState(false);
+  const [subMenu, setSubMenu] = useState({products: false, lang: false});
   const {pathname} = useLocation();
   const navigate = useNavigate();
   const {lang} = useParams();
@@ -49,7 +49,7 @@ export default function Navigation() {
               About Us
             </NavLink>
             <div 
-              className={`menu-item nav-products-sm ${pathname.includes(`${lang}/product`) ? "active" : ""}`}  
+              className={`menu-item nav-products-sm ${pathname === `/${lang}/products` ? "active" : ""}`}  
               onClick={()=>{closeMenu(); navigate(`/${lang}/products`)}}
             >
               <p>Products</p>
@@ -79,6 +79,18 @@ export default function Navigation() {
             <NavLink to={`/${lang}/contact-us`} className="menu-item" onClick={() => closeMenu()}>
               Contact Us
             </NavLink>
+            <div  className="menu-item nav-products-sm">
+              <Link
+                to={lang === "en" ? "": nextLang}
+                onClick={()=>{closeMenu(); langHandler("en")}}
+              >
+                <img src={langs[0].img} alt="" /> en </Link>
+              <Link 
+                to={lang === "ru" ? "": nextLang}
+                onClick={()=>{closeMenu(); langHandler("ru")}}>
+                  <img src={langs[1].img} alt="" /> ru
+              </Link>
+            </div>
           </div>
         </div>}
 
@@ -124,7 +136,7 @@ export default function Navigation() {
               <div className="products-drop-down" onClick={(e)=>e.stopPropagation()}>
                 <Link 
                  to={nextLang}
-                 onClick={()=>langHandler(langs.find((e)=>e.lang !== lang)?.lang)}>
+                 onClick={()=>langHandler(lang === "en" ? "en" : "ru")}>
                   <img src={langs.find((e)=>e.lang !== lang)?.img} alt="" />{langs.find((e)=>e.lang !== lang)?.lang}
                 </Link>
               </div>
