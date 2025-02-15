@@ -1,19 +1,19 @@
+import { useParams } from "react-router";
 import img1 from "../../assets/products/pro-about-roving1.png"
 import img2 from "../../assets/products/pro-about-roving2.png"
 import img3 from "../../assets/products/pro-about-roving3.png"
 
 export default function Roving() {
+  const {lang} = useParams();
   return (
     <>
     <div className="product">
       <div className="about-product">
         <p>
-          <strong>Директ ровинг</strong> представляет собой непрерывную нить,
-          которая отличается простотой своей структуры. В отличие от других
-          типов ровинга, он не подвергается процессам кручения или скручивания и
-          сохраняет исходную линейную форму волокон. Это означает, что структура
-          ровинга не изменяется, а волокна остаются параллельно уложенными без
-          образования плотного связующего слоя.
+          <strong>{lang === "en" ? "Basalt Roving " : "Директ ровинг "}</strong> 
+          {lang === "en" ?
+          "is a continuous thread, which is distinguished by the simplicity of its structure. Unlike othertypes of roving, it is not subjected to twisting or twisting processes and retains the original linear shape of the fibers. This means that the structure of the roving does not change, and the fibers remain parallel without forming a dense bonding layer." : 
+          "представляет собой непрерывную нить, которая отличается простотой своей структуры. В отличие от других типов ровинга, он не подвергается процессам кручения или скручивания и сохраняет исходную линейную форму волокон. Это означает, что структура ровинга не изменяется, а волокна остаются параллельно уложенными без образования плотного связующего слоя."}
         </p>
 
         <p>

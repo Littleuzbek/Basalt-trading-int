@@ -6,20 +6,22 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaSkype } from "react-icons/fa6";
+import { useParams } from "react-router";
 
 export default function ContactUs() {
+  const {lang} = useParams();
   return (
     <>
     <div className="contact-page">
       <div className="contact-info">
-        <h5>Call Us</h5>
-        <h3>or fill the form</h3>
+        <h5>{lang === "en" ? "Call Us" : "Позвоните нам"}</h5>
+        <h3>{lang === "en" ? "or fill the form" : "Или заполните форму"}</h3>
         <span className="contact-category">
           <div className="contactIcon">
             <IoCall />
           </div>
           <div className="contactText">
-            <p>Don't hesitate to contact us!</p>
+            <p>{lang === "en" ? "Don't hesitate to contact us" : "Не стесняйтесь обращаться к нам"}!</p>
             <p>Soon...</p>
           </div>
         </span>
@@ -28,7 +30,7 @@ export default function ContactUs() {
             <IoMailSharp />
           </div>
           <div className="contactText">
-            <p>Email Address:</p>
+            <p>{lang === "en" ? "Email Address" : "Адрес электронной почты"}:</p>
             <a href="/" className="ContactUs_info-style">info@biet.uz</a>
           </div>
         </span>
@@ -37,7 +39,7 @@ export default function ContactUs() {
             <FaLocationDot />
           </div>
           <div className="contactText">
-            <p>Company Location:</p>
+            <p>{lang === "en" ? "Company Location" : "Расположение компании"}:</p>
             <p>Ташкент город Ц1  БИЙ 45а </p>
           </div>
         </span>
@@ -58,12 +60,12 @@ export default function ContactUs() {
       </div>
 
       <form className="contact-form">
-          <input type="text" placeholder="First Name"/>
-          <input type="text" placeholder="Last Name" />
-          <input type="email" placeholder="Email Address"/>
-          <input type="tel" placeholder="Phone"/>
-          <textarea type="text" rows="auto" cols="auto" placeholder="How can we help?"/>
-          <input type="submit" onClick={(e) => e.preventDefault()} value="Send Message"/>
+          <input type="text" placeholder={lang === "en" ? "First Name" : "Имя"}/>
+          <input type="text" placeholder={lang === "en" ? "Last Name" : "Фамилия"}/>
+          <input type="email" placeholder={lang === "en" ? "Email Address" : "Адрес электронной почты"}/>
+          <input type="tel" placeholder={lang === "en" ? "Phone" : "Телефон"}/>
+          <textarea type="text" rows="auto" cols="auto" placeholder={lang === "en" ? "How can we help?" : "Чем мы можем помочь?"}/>
+          <input type="submit" onClick={(e) => e.preventDefault()} value={lang === "en" ? "Send Message" : "Отправить"}/>
       </form>
 
     </div>

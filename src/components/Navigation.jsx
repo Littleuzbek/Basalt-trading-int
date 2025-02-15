@@ -1,25 +1,34 @@
 import "./Navigation.css";
 import { useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router";
+import { Link, NavLink, useLocation, useNavigate, useParams } from "react-router";
 import logo from "../assets/logoNew.png";
 import { LuMenu } from "react-icons/lu";
 import { IoMdClose } from "react-icons/io";
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
+import { langs } from "../assets/data";
 
 export default function Navigation() {
   const [menu, setMenu] = useState(false);
   const [subMenu, setSubMenu] = useState(false);
+  const {pathname} = useLocation();
   const navigate = useNavigate();
-
+  const {lang} = useParams();
+  const nextLang =  decodeURIComponent(pathname).replace(lang, langs.find((e)=>e.lang !== lang)?.lang);
+  
   const closeMenu = () => {
     setMenu(false)
     setSubMenu(false)
   }
+
+  const langHandler = (newLang) => {
+    localStorage.setItem("lang", newLang)
+  }
+
   return (
     <>
       <div className="nav-container">
-        <Link to="/home/basalt-trading-int" className="nav-logo-sm">
+        <Link to={`/${lang}/home`} className="nav-logo-sm">
           <img src={logo} alt="Logo" />
         </Link>
 
@@ -33,7 +42,7 @@ export default function Navigation() {
 
         {menu && <div className="menu-container">
           <div className="menu">
-            <Link to="/home/basalt-trading-int" className="menu-item" onClick={() => closeMenu()}>
+            <Link to={`/${lang}/home`}  className="menu-item" onClick={() => closeMenu()}>
               Home
             </Link>
             <NavLink to="/about-us" className="menu-item" onClick={() => closeMenu()}>
@@ -59,33 +68,52 @@ export default function Navigation() {
         </div>}
 
         <div className="nav">
-          <Link to="/home/basalt-trading-int" className="nav-logo">
+          <Link to={`/${lang}/home`} className="nav-logo">
             <img src={logo} alt="Logo" />
           </Link>
           <div className="nav-item-container">
-            <NavLink to="/home/basalt-trading-int" className="nav-item">
-              <p>Home</p>
+            <NavLink to={`/${lang}/home`} className="nav-item">
+              <p style={location.pathname.includes("/home") ? {color: "var(--orange)"} : {}}>{lang === "en"? "Home" : "Главный"}</p>
+              <span style={location.pathname.includes("/home") ? {backgroundColor: "var(--orange)"} : {}}></span>
+            </NavLink>
+            <NavLink to={`/${lang}/about-us`} className="nav-item">
+              <p>{lang === "en"? "About Us" : "О нас"}</p>
               <span></span>
             </NavLink>
-            <NavLink to="/about-us" className="nav-item">
-              <p>About Us</p>
-              <span></span>
-            </NavLink>
-            <div className="nav-item nav-products" onClick={()=>{navigate("/products")}}>
-              <NavLink to="/products">Products</NavLink>
-              <span></span>
+            <div className="nav-item nav-products"  onClick={()=>{navigate(`${lang}/products`)}}>
+              <NavLink to={`/${lang}/products`}
+              style={location.pathname.includes("/products") ? {color: "var(--orange)"} : {}}
+              >
+                {lang === "en"? "Products" : "Продукция"}
+              </NavLink>
+              <span style={location.pathname.includes("/products") ? {backgroundColor: "var(--orange)"} : {}}></span>
               <div className="products-drop-down" onClick={(e)=>e.stopPropagation()}>
-                <Link to="/products/basalt-roving">БАЗАЛЬТОВЫЙ РОВИНГ</Link>
-                <Link to="/products/basalt-fiber">БАЗАЛЬТОВЫЙ фибра</Link>
-                <Link to="/products/basalt-geogrid">БАЗАЛЬТОВЫЙ геосетка</Link>
-                <Link to="/products/basalt-composite">БАЗАЛЬТОВЫЙ арматура</Link>
-                <Link to="/products/basalt-pipe">БАЗАЛЬТОВЫЙ труба</Link>
+                <Link to={`/${lang}/products/basalt-roving`}>{lang === "en" ? "basalt roving" : "БАЗАЛЬТОВЫЙ РОВИНГ"}</Link>
+                <Link to={`/${lang}/products/basalt-fiber`}>{lang === "en" ? "basalt wool" : "БАЗАЛЬТОВЫЙ фибра"}</Link>
+                <Link to={`/${lang}/products/basalt-geogrid`}>{lang === "en" ? "basalt geogrid" : "БАЗАЛЬТОВЫЙ геосетка"}</Link>
+                <Link to={`/${lang}/products/basalt-composite`}>{lang === "en" ? "basalt composite reinforcement" : "БАЗАЛЬТОВЫЙ арматура"}</Link>
+                <Link to={`/${lang}/products/basalt-pipe`}>{lang === "en" ? "basalt pipe" : "БАЗАЛЬТОВЫЙ труба"}</Link>
               </div>
             </div>
-            <NavLink to="contact-us" className="nav-item">
-              <p>Contact Us</p>
+            <NavLink to={`${lang}/contact-us`} className="nav-item">
+              <p>{lang === "en"? "Contact Us" : "Связаться"}</p>
               <span></span>
             </NavLink>
+            <div className="nav-item nav-products">
+            <Link 
+            to={pathname}
+            >
+             <img src={langs.find((e)=>e.lang === lang)?.img} alt="" /> {lang}
+            </Link>
+            <span style={location.pathname.includes("/products") ? {backgroundColor: "var(--orange)"} : {}}></span>
+              <div className="products-drop-down" onClick={(e)=>e.stopPropagation()}>
+                <Link 
+                 to={nextLang}
+                 onClick={()=>langHandler(langs.find((e)=>e.lang !== lang)?.lang)}>
+                  <img src={langs.find((e)=>e.lang !== lang)?.img} alt="" />{langs.find((e)=>e.lang !== lang)?.lang}
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

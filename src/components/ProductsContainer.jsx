@@ -6,16 +6,16 @@ import Composite from "./products/Composite";
 import Pipe from "./products/Pipe";
 
 export default function ProductsContainer() {
-    const location = useLocation();
+    const {pathname} = useLocation();
 
   return (
     <div className="products-page">
       <div>
-        {location.pathname?.includes("basalt-roving") && <Roving />}
-        {location.pathname?.includes("basalt-fiber") && <Fiber />}
-        {location.pathname?.includes("basalt-geogrid") && <Geogrid />}
-        {location.pathname?.includes("basalt-composite") && <Composite />}
-        {location.pathname?.includes("basalt-pipe") && <Pipe />}
+        {pathname?.includes("basalt-roving") && <Roving />}
+        {pathname?.includes("basalt-fiber") && <Fiber />}
+        {pathname?.includes("basalt-geogrid") && <Geogrid />}
+        {pathname?.includes("basalt-composite") && <Composite />}
+        {pathname?.includes("basalt-pipe") && <Pipe />}
       </div>
     </div>
   );

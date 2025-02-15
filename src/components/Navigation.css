@@ -34,7 +34,7 @@
 .nav-item-container {
     display: flex;
     justify-content: space-between;
-    width: 40%;
+    width: 45%;
 }
 
 .nav-item {
@@ -52,8 +52,9 @@
 .nav-item > p {
     color: var(--blue-dark);
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     transition: .3s;
+    text-transform: uppercase;
 }
 
 .nav-item > span {
@@ -88,6 +89,7 @@
 .products-drop-down{
     width: max-content;
     position: absolute;
+    left: -50%;
     background-color: var(--blue-dark);
     animation: dropAnim .3s forwards;
     display: none;
@@ -113,6 +115,19 @@
 
 .nav-products:hover > .products-drop-down{
     display: flex;
+}
+
+.products-drop-down > a,
+.nav-products > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.products-drop-down > a > img,
+.nav-products > a > img {
+    width: 20px;
+    height: 20px;
 }
 
 a{

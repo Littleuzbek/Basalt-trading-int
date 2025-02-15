@@ -4,36 +4,37 @@ import pro2 from "../assets/products/pro-fiber.png"
 import pro3 from "../assets/products/pro-geogrid.png"
 import pro4 from "../assets/products/pro-composite.png"
 import pro5 from "../assets/products/pro-pipe.png"
-import { Link } from "react-router"
+import { Link, useParams } from "react-router"
 
 export default function Products() {
+    const {lang} = useParams();
   return (
     <div className="products-page">
         <div>
             <div className="pro-card">
                 <img src={pro1} alt="" />
-                <h3>БАЗАЛЬТОВЫЙ РОВИНГ</h3>
-                <Link to="basalt-roving">Подробнее</Link>
+                <h3>{lang === "en" ? "Basalt Roving" : "БАЗАЛЬТОВЫЙ РОВИНГ"}</h3>
+                <Link to="basalt-roving">{lang === "en" ? "More" : "Подробнее"}</Link>
             </div>
             <div className="pro-card">
                 <img src={pro2} alt="" />
-                <h3>БАЗАЛЬТОВЫЙ фибра</h3>
-                <Link to="basalt-fiber">Подробнее</Link>
+                <h3>{lang === "en" ? "Basalt Wool" : "БАЗАЛЬТОВЫЙ фибра"}</h3>
+                <Link to="basalt-fiber">{lang === "en" ? "More" : "Подробнее"}</Link>
             </div>
             <div className="pro-card">
                 <img src={pro3} alt="" />
-                <h3>БАЗАЛЬТОВЫЙ геосетка</h3>
-                <Link to="basalt-geogrid">Подробнее</Link>
+                <h3>{lang === "en" ? "Basalt Geogrid" : "БАЗАЛЬТОВЫЙ геосетка"}</h3>
+                <Link to="basalt-geogrid">{lang === "en" ? "More" : "Подробнее"}</Link>
             </div>
             <div className="pro-card">
                 <img src={pro4} alt="" />
-                <h3>БАЗАЛЬТОВЫЙ арматура</h3>
-                <Link to="basalt-composite">Подробнее</Link>
+                <h3>{lang === "en" ? "Basalt Composite reinforcement" : "БАЗАЛЬТОВЫЙ арматура"}</h3>
+                <Link to="basalt-composite">{lang === "en" ? "More" : "Подробнее"}</Link>
             </div>
             <div className="pro-card">
                 <img src={pro5} alt="" />
-                <h3>БАЗАЛЬТОВЫЙ труба</h3>
-                <Link to="basalt-pipe">Подробнее</Link>
+                <h3>{lang === "en" ? "Basalt Pipe" : "БАЗАЛЬТОВЫЙ труба"}</h3>
+                <Link to="basalt-pipe">{lang === "en" ? "More" : "Подробнее"}</Link>
             </div>
         </div>
     </div>

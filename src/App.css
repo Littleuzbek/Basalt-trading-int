@@ -98,7 +98,8 @@ h3::selection{
 
 #home {
   text-decoration: none;
-  color: white
+  color: white;
+  user-select: none;
 }
 
 #home:hover {
@@ -205,6 +206,7 @@ h3::selection{
 .contact-service > p,
 .contact-service > span > p {
   font-size: 17px;
+  line-height: 1.4;
 }
 
 .before-footer-container{
