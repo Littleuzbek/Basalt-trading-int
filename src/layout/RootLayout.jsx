@@ -29,7 +29,7 @@ export default function RootLayout() {
 
     setTitle({
       sectTitle: lang === "en" ? sectPage?.titleEn : sectPage?.titleRu,
-      sectProduct: lang === "en" ? sectProducts?.titleEn : sectProducts?.titleRu
+      sectProduct: lang === "en" ? (sectProducts?.titleEn || "") : (sectProducts?.titleRu || "")
     })
 
     if(!pathname?.includes("/home/")){

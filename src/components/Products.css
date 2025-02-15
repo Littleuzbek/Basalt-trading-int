@@ -63,6 +63,7 @@
 .about-product{
     width: 68%;
     display: flex;
+    text-align: justify;
     flex-direction: column;
     gap: 20px;
 }

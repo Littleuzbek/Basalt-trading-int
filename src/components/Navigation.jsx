@@ -42,26 +42,41 @@ export default function Navigation() {
 
         {menu && <div className="menu-container">
           <div className="menu">
-            <Link to={`/${lang}/home`}  className="menu-item" onClick={() => closeMenu()}>
+            <NavLink to={`/${lang}/home`}  className="menu-item" onClick={() => closeMenu()}>
               Home
-            </Link>
-            <NavLink to="/about-us" className="menu-item" onClick={() => closeMenu()}>
+            </NavLink>
+            <NavLink to={`/${lang}/about-us`} className="menu-item" onClick={() => closeMenu()}>
               About Us
             </NavLink>
-            <div className="menu-item nav-products-sm">
+            <div 
+              className={`menu-item nav-products-sm ${pathname.includes(`${lang}/product`) ? "active" : ""}`}  
+              onClick={()=>{closeMenu(); navigate(`/${lang}/products`)}}
+            >
               <p>Products</p>
               {subMenu ? (
-                <CiCircleMinus onClick={() => setSubMenu(!subMenu)} />
+                <CiCircleMinus onClick={(e) => {e.stopPropagation(); setSubMenu(!subMenu)}} />
               ) : (
-                <CiCirclePlus onClick={() => setSubMenu(!subMenu)} />
+                <CiCirclePlus onClick={(e) => {e.stopPropagation(); setSubMenu(!subMenu)}} />
               )}
               {subMenu && <div className="sub-menu">
-                <span>Product1</span>
-                <span>Product2</span>
-                <span>Product3</span>
+                <span  onClick={(e)=> {e.stopPropagation(); closeMenu();}}>
+                  <NavLink to={`/${lang}/products/basalt-roving`}>Basalt Roving</NavLink>
+                </span>
+                <span  onClick={(e)=> {e.stopPropagation(); closeMenu();}}>
+                  <NavLink to={`/${lang}/products/basalt-fiber`}>Basalt Fiber</NavLink>
+                </span>
+                <span onClick={(e)=> {e.stopPropagation(); closeMenu();}}>
+                  <NavLink to={`/${lang}/products/basalt-geogrid`}>Basalt Geogrid</NavLink>
+                </span>
+                <span onClick={(e)=> {e.stopPropagation(); closeMenu();}}>
+                  <NavLink to={`/${lang}/products/basalt-composite`}>Basalt Composite Reinforcement</NavLink>
+                </span>
+                <span onClick={(e)=> {e.stopPropagation(); closeMenu();}}>
+                  <NavLink to={`/${lang}/products/basalt-pipe`}>Basalt Pipe</NavLink>
+                </span>
               </div>}
             </div>
-            <NavLink to="/contact-us" className="menu-item" onClick={() => closeMenu()}>
+            <NavLink to={`/${lang}/contact-us`} className="menu-item" onClick={() => closeMenu()}>
               Contact Us
             </NavLink>
           </div>
@@ -89,7 +104,7 @@ export default function Navigation() {
               <span style={location.pathname.includes("/products") ? {backgroundColor: "var(--orange)"} : {}}></span>
               <div className="products-drop-down" onClick={(e)=>e.stopPropagation()}>
                 <Link to={`/${lang}/products/basalt-roving`}>{lang === "en" ? "basalt roving" : "БАЗАЛЬТОВЫЙ РОВИНГ"}</Link>
-                <Link to={`/${lang}/products/basalt-fiber`}>{lang === "en" ? "basalt wool" : "БАЗАЛЬТОВЫЙ фибра"}</Link>
+                <Link to={`/${lang}/products/basalt-fiber`}>{lang === "en" ? "basalt fiber" : "БАЗАЛЬТОВЫЙ фибра"}</Link>
                 <Link to={`/${lang}/products/basalt-geogrid`}>{lang === "en" ? "basalt geogrid" : "БАЗАЛЬТОВЫЙ геосетка"}</Link>
                 <Link to={`/${lang}/products/basalt-composite`}>{lang === "en" ? "basalt composite reinforcement" : "БАЗАЛЬТОВЫЙ арматура"}</Link>
                 <Link to={`/${lang}/products/basalt-pipe`}>{lang === "en" ? "basalt pipe" : "БАЗАЛЬТОВЫЙ труба"}</Link>

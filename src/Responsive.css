@@ -48,11 +48,20 @@
         border: 1px solid white;
     }
 
+    .menu-item.active{
+        background-color: var(--orange);
+    }
+
     .nav-products-sm{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 15px;
+    }
+
+    .nav-products-sm > p{
+        display: grid;
+        place-items: center;
     }
 
     .nav-products-sm > svg{
@@ -66,11 +75,23 @@
         display: flex;
         flex-direction: column;
     }
+
+    .sub-menu > span {
+        width: 100%;
+        display: flex;
+    }
     
-    .sub-menu > span{
+    .sub-menu > span > a{
+        width: 100%;
         padding: 15px;
         border-top: 1px solid white;
         border-bottom: 1px solid white;
+        color: white;
+    }
+
+    .sub-menu > span:nth-last-child(1) > a{
+        border-bottom: none;
+        padding: 15px 15px 0;
     }
     
     .nav-logo{
@@ -130,17 +151,7 @@
         display: none;
     }
 
-    .service-details-right {
-        width: 100%;
-    }
     
-    .contact-service > span {
-        width: 100%;
-    }
-    
-    .extra-info > span {
-        width: 100% !important;
-    }
 
     .before-footer-container{
         height: 400px;
@@ -194,16 +205,6 @@
         gap: 40px !important;
     }
 
-    .contact-info,
-    .contact-form{
-        width: 100% !important;
-    }
-
-
-    .contact-form > input{
-        width: 100% !important;
-    }
-
     .contact-form > input:nth-last-child(1){
         width: 40% !important;
     }
@@ -219,8 +220,44 @@
         gap: 30px !important;
     }
 
+    .products-page > div{
+        padding: 0 15px;
+    }
+
+    .products-page > div{
+        justify-content: center;
+    }
+
+    .product{
+        flex-direction: column;
+    }
+
+    .img-product{
+        order: 0;
+        width: auto !important;
+        justify-content: center;
+        position: static !important;
+    }
+
+    .about-product{
+        order: 1;
+    }
+
+    .contact-button{
+        bottom: 25px !important;
+        right: 25px !important;
+    }
+
+    .products-page > div,
+    .about-product,
     .about,
-    .about-img{
+    .about-img,
+    .contact-form > input,
+    .contact-info,
+    .contact-form,
+    .service-details-right,
+    .contact-service > span,
+    .extra-info > span {
         width: 100% !important;
     }
 
