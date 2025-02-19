@@ -13,6 +13,7 @@ import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 import Products from './pages/Products';
 import ProductsContainer from './components/ProductsContainer';
+import NotFound from './pages/NotFound';
 
 function App() {
   let language = localStorage.getItem("lang");
@@ -24,10 +25,10 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<RootLayout />}>
+      <Route path="/" element={<RootLayout />} errorElement={<NotFound />}>
       <Route index element={<Navigate to={`/${currentLang}/home`} replace />}/>
 
-      <Route path=":lang" >
+      <Route path=":lang">
         <Route index element={<Navigate to="home" replace />} />
         <Route path="home" element={<Home />} />
         <Route path="home/:id" element={<Home />} />

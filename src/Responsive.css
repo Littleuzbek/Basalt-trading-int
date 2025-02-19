@@ -315,10 +315,15 @@
 }
 
 @media (min-width: 2000px) {
+    .page-title-container{
+        height: 450px;
+    }
+
+    
     .nav-container{
         height: 100px;
     }
-
+    
     .nav-logo{
         height: 100px !important;
     }
@@ -326,7 +331,12 @@
     .nav-item {
         height: 100% !important;
     }
+
+    .service-details-left{
+        top: 120px;
+    }
     
+    .products-drop-down > a, .nav-products > a,
     .service-details-list > li > a,
     .nav-item > p{
         font-size: 26px !important;
@@ -336,7 +346,7 @@
     .contact-service > h3{
         font-size: 32px !important;
     }
-
+    
     .about > span > div > h3,
     .before-footer > h5,
     .service-details-info > h3,
@@ -344,6 +354,10 @@
         font-size: 44px !important;
     }
     
+    .service-details-info > ol, 
+    .service-details-info > ul,
+    .service-details-info > h4,
+    .service-details-info > p,
     .contact-form > textarea,
     .contact-form > input,
     .contactText,

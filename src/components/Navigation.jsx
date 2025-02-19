@@ -136,7 +136,7 @@ export default function Navigation() {
               <div className="products-drop-down" onClick={(e)=>e.stopPropagation()}>
                 <Link 
                  to={nextLang}
-                 onClick={()=>langHandler(lang === "en" ? "en" : "ru")}>
+                 onClick={()=>langHandler(lang === "en" ? "ru" : "en")}>
                   <img src={langs.find((e)=>e.lang !== lang)?.img} alt="" />{langs.find((e)=>e.lang !== lang)?.lang}
                 </Link>
               </div>
