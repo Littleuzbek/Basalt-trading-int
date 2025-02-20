@@ -67,7 +67,7 @@ export default function RootLayout() {
                 <>
                   {" > "}
                   {pathname.includes("/products/") ? (
-                    <p onClick={() => navigate(`/${lang}/products`)}>{title.sectTitle}</p>
+                    title.sectTitle
                   ) : (
                     title.sectTitle
                   )}
