@@ -120,6 +120,7 @@ export default function Navigation() {
                 <Link to={`/${lang}/products/basalt-geogrid`}>{lang === "en" ? "basalt geogrid" : "БАЗАЛЬТОВЫЙ геосетка"}</Link>
                 <Link to={`/${lang}/products/basalt-composite`}>{lang === "en" ? "basalt composite reinforcement" : "БАЗАЛЬТОВЫЙ арматура"}</Link>
                 <Link to={`/${lang}/products/basalt-pipe`}>{lang === "en" ? "basalt pipe" : "БАЗАЛЬТОВЫЙ труба"}</Link>
+                <Link to={`/${lang}/products/basalt-fabric`}>{lang === "en" ? "basalt fabric" : "БАЗАЛЬТОВЫЙ фабрика"}</Link>
               </div>
             </div>
             <NavLink to={`${lang}/contact-us`} className="nav-item">

@@ -4,6 +4,7 @@ import pro2 from "../assets/products/pro-fiber.png"
 import pro3 from "../assets/products/pro-geogrid.png"
 import pro4 from "../assets/products/pro-composite.png"
 import pro5 from "../assets/products/pro-pipe.png"
+import pro6 from "../assets/products/a.png"
 import { Link, useParams } from "react-router"
 
 export default function Products() {
@@ -34,6 +35,11 @@ export default function Products() {
             <div className="pro-card">
                 <img src={pro5} alt="" />
                 <h3>{lang === "en" ? "Basalt Pipe" : "БАЗАЛЬТОВЫЙ труба"}</h3>
+                <Link to="basalt-pipe">{lang === "en" ? "More" : "Подробнее"}</Link>
+            </div>
+            <div className="pro-card">
+                <img src={pro6} alt="" />
+                <h3>{lang === "en" ? "Basalt Fabric" : "БАЗАЛЬТОВЫЙ фабрика"}</h3>
                 <Link to="basalt-pipe">{lang === "en" ? "More" : "Подробнее"}</Link>
             </div>
         </div>

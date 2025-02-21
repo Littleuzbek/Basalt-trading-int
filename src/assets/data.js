@@ -44,6 +44,12 @@ export const data = [
       titleRu: "Базальтовая Труба",
       img: details6
     },
+    {
+      link: "/basalt-fabric",
+      titleEn: "Basalt Fabric",
+      titleRu: "Базальтовая Фабрика",
+      img: details6
+    },
   ];
 
   export const langs = [ {lang: "en", img: eng}, {lang: "ru", img: rus}];

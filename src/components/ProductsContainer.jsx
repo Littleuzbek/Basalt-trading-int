@@ -1,33 +1,35 @@
-import { data, useLocation } from "react-router";
+import { data, useParams } from "react-router";
 import Roving from "../components/products/Roving"
 import Fiber from "./products/Fiber";
 import Geogrid from "./products/Geogrid";
 import Composite from "./products/Composite";
 import Pipe from "./products/Pipe";
 import { useEffect } from "react";
+import Fabric from "./products/Fabric";
 
 export default function ProductsContainer() {
-    const {pathname} = useLocation();
-    const productLink = ["basalt-roving","basalt-fiber","basalt-geogrid","basalt-composite","basalt-pipe"]
+    const {id} = useParams();
+    const productLink = [
+      {id: "basalt-roving", comp: <Roving />},
+      {id: "basalt-fiber", comp: <Fiber />},
+      {id: "basalt-geogrid", comp: <Geogrid />},
+      {id: "basalt-composite", comp: <Composite />},
+      {id: "basalt-pipe", comp: <Pipe />},
+      {id: "basalt-fabric", comp: <Fabric />},
+]
 
     useEffect(()=>{
-      const split = pathname.split("/");
-
-      const sorting = productLink.find((e)=> e === split?.at(-1))
+      const sorting = productLink.find((e)=> e.id === id);
 
       if(!sorting){
         throw data("Page not found", {status: 404})
       }
-    },[pathname])
+    },[id])
 
     return (
     <div className="products-page">
       <div>
-        {pathname?.includes("basalt-roving") && <Roving />}
-        {pathname?.includes("basalt-fiber") && <Fiber />}
-        {pathname?.includes("basalt-geogrid") && <Geogrid />}
-        {pathname?.includes("basalt-composite") && <Composite />}
-        {pathname?.includes("basalt-pipe") && <Pipe />}
+        {productLink.find((e)=> e.id === id)?.comp}
       </div>
     </div>
   );
