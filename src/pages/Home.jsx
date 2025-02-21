@@ -8,6 +8,7 @@ const Fiber = lazy(()=> import("../components/homeProducts/Fiber"))
 const Geogrid = lazy(()=> import("../components/homeProducts/Geogrid"))
 const Composite = lazy(()=> import("../components/homeProducts/Composite"))
 const Pipe = lazy(()=> import("../components/homeProducts/Pipe"))
+const Fabric = lazy(()=> import("../components/homeProducts/Fabric"))
 
 export default function Home() {
   const {pathname} = useLocation();
@@ -30,6 +31,8 @@ export default function Home() {
       component = <Composite />
     }else if(pathname === `/${lang}/home/basalt-pipe`){
       component = <Pipe />
+    }else if(pathname === `/${lang}/home/basalt-fabric`){
+      component = <Fabric />
     }else{
       component = <BasaltTrading />
     }

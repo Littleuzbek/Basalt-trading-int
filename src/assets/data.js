@@ -4,6 +4,7 @@ import details3 from "../assets/products/fiber.png";
 import details4 from "../assets/products/geogrid.png";
 import details5 from "../assets/products/composite.png";
 import details6 from "../assets/products/pipe.png";
+import details7 from "../assets/products/fabric.png";
 import eng from "../assets/eng.png"
 import rus from "../assets/rus.png"
 
@@ -48,7 +49,7 @@ export const data = [
       link: "/basalt-fabric",
       titleEn: "Basalt Fabric",
       titleRu: "Базальтовая Фабрика",
-      img: details6
+      img: details7
     },
   ];
 
