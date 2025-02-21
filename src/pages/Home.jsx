@@ -74,15 +74,7 @@ export default function Home() {
       </div>
 
       <div className="home-map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.4060767843007!2d69.19345597552702!3d41.2564935041049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8a01728d7abd%3A0x7fecfb833fc06bff!2sBunyodkor%20shoh%20ko&#39;chasi%2027%2C%20%D0%A2%D0%BEshkent%2C%20Toshkent%2C%20O%CA%BBzbekiston!5e0!3m2!1suz!2s!4v1738679862612!5m2!1suz!2s"
-          width="600"
-          height="450"
-          style={{ border: "0" }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2996.9452078398053!2d69.28778617605569!3d41.310055571309874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDE4JzM2LjIiTiA2OcKwMTcnMjUuMyJF!5e0!3m2!1sru!2s!4v1740154120381!5m2!1sru!2s" width="600" height="450" style={{ border: "0" }} allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       <div className="before-footer-container">
