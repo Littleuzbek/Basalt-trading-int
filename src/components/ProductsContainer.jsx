@@ -10,14 +10,15 @@ import Fabric from "./products/Fabric";
 export default function ProductsContainer() {
     const {id} = useParams();
     const productLink = [
-      {id: "basalt-roving", comp: <Roving />},
-      {id: "basalt-fiber", comp: <Fiber />},
-      {id: "basalt-geogrid", comp: <Geogrid />},
-      {id: "basalt-composite", comp: <Composite />},
-      {id: "basalt-pipe", comp: <Pipe />},
-      {id: "basalt-fabric", comp: <Fabric />},
-]
+      {id: "basalt-roving", comp: <Roving />, name: "Basalt Roving"},
+      {id: "basalt-fiber", comp: <Fiber />, name: "Basalt Fiber"},
+      {id: "basalt-geogrid", comp: <Geogrid />, name: "Basalt Geogrids"},
+      {id: "basalt-composite", comp: <Composite />, name: "Basalt Composite"},
+      {id: "basalt-pipe", comp: <Pipe />, name: "Basalt Pipe"},
+      {id: "basalt-fabric", comp: <Fabric />, name: "Basalt Fabric"},
+    ]
 
+    
     useEffect(()=>{
       const sorting = productLink.find((e)=> e.id === id);
 

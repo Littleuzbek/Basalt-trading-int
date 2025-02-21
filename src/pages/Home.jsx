@@ -1,4 +1,4 @@
-import { lazy, useEffect } from "react";
+import { lazy } from "react";
 import { Link, NavLink, useLocation, useParams } from "react-router";
 import {data as options} from "../assets/data"
 import ContactService from "../components/ContactService";

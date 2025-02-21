@@ -1,7 +1,7 @@
 import "./Navigation.css";
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate, useParams } from "react-router";
-import logo from "../assets/logoNew.png";
+import logo from "../assets/about-img.png";
 import { LuMenu } from "react-icons/lu";
 import { IoMdClose } from "react-icons/io";
 import { CiCirclePlus } from "react-icons/ci";
@@ -133,7 +133,7 @@ export default function Navigation() {
             >
              <img src={langs.find((e)=>e.lang === lang)?.img} alt="" /> {lang}
             </Link>
-            <span style={location.pathname.includes("/products") ? {backgroundColor: "var(--orange)"} : {}}></span>
+            <span></span>
               <div className="products-drop-down" onClick={(e)=>e.stopPropagation()}>
                 <Link 
                  to={nextLang}
