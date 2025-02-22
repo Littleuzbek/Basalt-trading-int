@@ -53,20 +53,62 @@ export const data = [
     },
     {
       link: "/basalt-direct-roving",
-      titleEn: "Direct Roving",
+      titleEn: "Basalt Direct Roving",
       titleRu: "Базальтовая Директ ровинг",
       img: details7
     },
     {
       link: "/basalt-assembled-roving",
-      titleEn: "Assembled Roving",
+      titleEn: "Basalt Assembled Roving",
       titleRu: "Ассемблированный базальтовый ровинг",
       img: details7
     },
     {
       link: "/basalt-twisted-thread",
-      titleEn: "Twisted Thread",
+      titleEn: "Basalt Twisted Thread",
       titleRu: "крученой  нитъ",
+      img: details7
+    },
+    {
+      link: "/basalt-facade",
+      titleEn: "Plaster/Facade basalt grid",
+      titleRu: "Штукатурная/Фасадная базальтовая сетка",
+      img: details7
+    },
+    {
+      link: "/basalt-facade",
+      titleEn: "Universal Basalt Grid",
+      titleRu: "Базальтовая сетка универсальная",
+      img: details7
+    },
+    {
+      link: "/basalt-univercal",
+      titleEn: "Universal Basalt Grid",
+      titleRu: "Базальтовая сетка универсальная",
+      img: details7
+    },
+    {
+      link: "/basalt-priming",
+      titleEn: "Basalt grid for soils",
+      titleRu: "Базальтовая сетка для грунтов",
+      img: details7
+    },
+    {
+      link: "/basalt-asphalt-concrete",
+      titleEn: "Basalt grid for asphalt",
+      titleRu: "Базальтовая сетка для асфальтобетона",
+      img: details7
+    },
+    {
+      link: "/basalt-composite-rebar",
+      titleEn: "Basalt composite rebar",
+      titleRu: "Базальтокомпозитная арматура",
+      img: details7
+    },
+    {
+      link: "/basalt-reinforcement-mesh",
+      titleEn: "Basalt Reinforcement mesh",
+      titleRu: "Базальтокомпозитная Армосетка",
       img: details7
     },
   ];

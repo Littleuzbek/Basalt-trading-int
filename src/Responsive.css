@@ -281,6 +281,11 @@
     .extra-info > span {
         width: 100% !important;
     }
+
+    .img-panel > img{
+        width: 60px !important;
+        height: 60px !important;
+    }
 }
 
 @media (min-width: 530px) {
@@ -289,10 +294,22 @@
     }
 }
 
+@media (min-width: 600px) and (max-width: 768px) {
+    .img-panel > img{
+        width: 80px !important;
+        height: 80px !important;
+    }
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
     .products-page > div{
         grid-template-columns: auto auto !important;
         justify-content: space-around !important;
+    }
+
+    .img-panel > img{
+        width: 100px !important;
+        height: 100px !important;
     }
 
     .related-products {
@@ -305,6 +322,7 @@
     }
 }
 
+
 @media (min-width: 576px) and (max-width: 991px) {
     .contact-page,
     .about-page,
@@ -314,7 +332,6 @@
         padding: 0 35px;
     }
 
-    
 }
 
 @media (min-width: 991px) and (max-width: 1300px){

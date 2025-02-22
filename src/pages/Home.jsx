@@ -43,7 +43,7 @@ export default function Home() {
         <div className="row">
           <div className="service-details-left">
             <ul className="service-details-list">
-              {options?.map((page) => (
+              {options?.slice(0,7)?.map((page) => (
                 <li key={page?.link}>
                   <NavLink
                     to={`/${lang + "/home" + page?.link}`}
