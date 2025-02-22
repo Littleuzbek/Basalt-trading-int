@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router";
 import img1 from "../../assets/products/pro-about-geogrid1.jpg";
 import img2 from "../../assets/products/pro-about-geogrid2.jpg";
 import img3 from "../../assets/products/pro-about-geogrid3.jpg";
-import img4 from "../../assets/products/pro-about-geogrid4.jpg";
+import img4 from "../../assets/products/asphalt.jpg";
 
 export default function Geogrid() {
   const { lang } = useParams();
