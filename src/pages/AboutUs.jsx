@@ -16,7 +16,7 @@ export default function AboutUs() {
         </span>
         <p>
           {lang === "en" ?
-           "Basalt Export Trading INT supplies high-quality basalt products to a variety of industries, including construction, infrastructure, manufacturing and more. With years of experience, we have established ourselves as a reliable partner, providing durable, environmentally friendly and cost-effective solutions to customers worldwide." :
+           "Basalt INTERNATIONAL Export Trading supplies high-quality basalt products to a variety of industries, including construction, infrastructure, manufacturing and more. With years of experience, we have established ourselves as a reliable partner, providing durable, environmentally friendly and cost-effective solutions to customers worldwide." :
           "Компания Basalt Export Trading INT занимается поставками высококачественных базальтовых изделий для различных отраслей, включая строительство, инфраструктуру, производство и другие сферы. Благодаря многолетнему опыту мы зарекомендовали себя как надежный партнер, предоставляющий прочные, экологически чистые и экономически выгодные решения для клиентов по всему миру."}
         </p>
 
