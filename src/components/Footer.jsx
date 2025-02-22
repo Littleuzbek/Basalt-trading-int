@@ -1,6 +1,8 @@
+import { useParams } from "react-router";
 import "./Footer.css";
 
 export default function Footer() {
+    const {lang} = useParams();
   return (
     <div className="footer_container">
        <div className="footer" >
@@ -8,7 +10,7 @@ export default function Footer() {
 
            <div className="footer_item-1">
             <h4>
-                EMAIL ADDRESS
+                {lang === "en" ? "EMAIL ADDRESS" : "ЭЛЕКТРОННОЙ ПОЧТЫ"}
             </h4>
             <a href="/" className="Footer_info-style">
             info@biet.uz
@@ -17,10 +19,10 @@ export default function Footer() {
 
            <div className="footer_item-1">
             <h4>
-                PHONE NUMBER
+                {lang === "en" ? "PHONE NUMBER" : "НОМЕР ТЕЛЕФОНА"}
             </h4>
             <p>
-                Soon...
+                +998 90 027 40 00
             </p>
            </div>
 
@@ -46,7 +48,7 @@ export default function Footer() {
         
         <div className="footer_inner-2">
            <div className="footer_top-div"/>
-           <p>© 2025 Basalt International Export Trading, All Rights Reserved.</p>
+           <p>© 2025 Basalt International Export Trading, {lang === "en" ? "All Rights Reserved" : "Все Права защищены"}.</p>
         </div>
 
        </div>
