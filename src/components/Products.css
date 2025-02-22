@@ -111,3 +111,8 @@
 .sticky-img {
     height: fit-content !important;
 }
+
+.related-products{
+    display: flex;
+    gap: 50px
+}
