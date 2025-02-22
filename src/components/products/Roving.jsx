@@ -1,13 +1,27 @@
 import { Link, useParams } from "react-router";
-import img1 from "../../assets/products/pro-about-roving1.png";
 import img2 from "../../assets/products/pro-about-roving2.png";
 import img3 from "../../assets/products/pro-about-roving3.png";
+import roving1 from "../../assets/products/pro-about-roving1.png";
+import roving4 from "../../assets/products/dir-roving1.png";
+import roving2 from "../../assets/products/dir-roving2.png";
+import roving3 from "../../assets/products/dir-roving3.png";
+import { useState } from "react";
 
 export default function Roving() {
   const { lang } = useParams();
+  const [mainImg,setMainImg] = useState(roving1);
   return (
     <>
       <div className="product">
+        <div className="img-product">
+          <img src={mainImg} alt="" />
+          <div className="img-panel">
+            <img src={roving1} alt="" loading="lazy" onClick={()=>setMainImg(roving1)}/>
+            <img src={roving2} alt="" loading="lazy" onClick={()=>setMainImg(roving2)}/>
+            <img src={roving3} alt="" loading="lazy" onClick={()=>setMainImg(roving3)}/>
+            <img src={roving4} alt="" loading="lazy" onClick={()=>setMainImg(roving4)}/>
+          </div>
+        </div>
         <div className="about-product">
           <p>
             <strong>
@@ -29,9 +43,6 @@ export default function Roving() {
               ? "Direct roving is used in a variety of applications, including the production of products that require high strength and uniform load distribution. Due to its simple yet functional form, direct roving has become an indispensable material for many industries. Its key feature is the preservation of the original fiber structure, which makes it an ideal choice for processes where precision and reliability are important."
               : "Директ ровинг используется в различных сферах, включая производство изделий, требующих высокой прочности и равномерного распределения нагрузок. Благодаря своей простой, но функциональной форме, директ ровинг стал незаменимым материалом для многих отраслей. Его ключевая особенность — это сохранение исходной структуры волокон, что делает его идеальным выбором для процессов, где важны точность и надежность."}
           </p>
-        </div>
-        <div className="img-product">
-          <img src={img1} alt="" />
         </div>
       </div>
 

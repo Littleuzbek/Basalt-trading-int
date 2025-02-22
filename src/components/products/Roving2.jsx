@@ -2,15 +2,29 @@ import { Link, useParams } from "react-router";
 import img1 from "../../assets/products/pro-about-roving1.png";
 import img2 from "../../assets/products/pro-about-roving2.png";
 import img3 from "../../assets/products/pro-about-roving3.png";
+import roving1 from "../../assets/products/assem-roving1.png";
+import roving2 from "../../assets/products/assem-roving2.png";
+import roving3 from "../../assets/products/assem-roving3.png";
+import roving4 from "../../assets/products/assem-roving4.png";
+import roving5 from "../../assets/products/assem-roving5.png";
+import { useState } from "react";
 
 export default function Roving() {
   const {lang} = useParams();
+  const [mainImg,setMainImg] = useState(roving1);
   return (
     <>
     <div className="product">
-      <div className="img-product">
-        <img src={img2} alt="" />
-      </div>
+        <div className="img-product">
+          <img src={mainImg} alt="" />
+          <div className="img-panel">
+            <img src={roving1} alt="" loading="lazy" onClick={()=>setMainImg(roving1)}/>
+            <img src={roving2} alt="" loading="lazy" onClick={()=>setMainImg(roving2)}/>
+            <img src={roving3} alt="" loading="lazy" onClick={()=>setMainImg(roving3)}/>
+            <img src={roving4} alt="" loading="lazy" onClick={()=>setMainImg(roving4)}/>
+            <img src={roving5} alt="" loading="lazy" onClick={()=>setMainImg(roving5)}/>
+          </div>
+        </div>
       <div className="about-product">
         <p>
           <strong>{lang === "en"? "Assembled basalt roving" : "Ассемблированный базальтовый ровинг"}</strong> — 

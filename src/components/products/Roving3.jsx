@@ -1,13 +1,29 @@
 import { Link, useParams } from "react-router";
 import img1 from "../../assets/products/pro-about-roving1.png";
 import img2 from "../../assets/products/pro-about-roving2.png";
-import img3 from "../../assets/products/pro-about-roving3.png";
+import roving1 from "../../assets/products/twisted-roving1.png";
+import roving2 from "../../assets/products/twisted-roving2.png";
+import roving3 from "../../assets/products/twisted-roving3.png";
+import roving4 from "../../assets/products/twisted-roving4.png";
+import roving5 from "../../assets/products/twisted-roving5.png";
+import { useState } from "react";
 
 export default function Roving() {
   const { lang } = useParams();
+  const [mainImg,setMainImg] = useState(roving1);
   return (
     <>
       <div className="product">
+        <div className="img-product">
+          <img src={mainImg} alt="" />
+          <div className="img-panel">
+            <img src={roving1} alt="" loading="lazy" onClick={()=>setMainImg(roving1)}/>
+            <img src={roving2} alt="" loading="lazy" onClick={()=>setMainImg(roving2)}/>
+            <img src={roving3} alt="" loading="lazy" onClick={()=>setMainImg(roving3)}/>
+            <img src={roving4} alt="" loading="lazy" onClick={()=>setMainImg(roving4)}/>
+            <img src={roving5} alt="" loading="lazy" onClick={()=>setMainImg(roving5)}/>
+          </div>
+        </div>
         <div className="about-product">
           <p>
             <>
@@ -79,9 +95,6 @@ export default function Roving() {
               ? "This additional section on twisted yarns can be added to the previous text to provide more complete information on basalt roving applications."
               : " Этот дополнительный раздел о крученой нити можно добавить к предыдущему тексту, чтобы предоставить более полную информацию о применении базальтового ровинга."}
           </p>
-        </div>
-        <div className="img-product sticky-img">
-          <img src={img3} alt="" />
         </div>
       </div>
 

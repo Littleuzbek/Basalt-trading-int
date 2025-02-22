@@ -1,10 +1,26 @@
 import { useParams } from "react-router"
-import img1 from "../../assets/products/fiber.png"
+import fiber1 from "../../assets/products/fiber.png"
+import fiber2 from "../../assets/products/fiber1.png"
+import fiber3 from "../../assets/products/fiber2.png"
+import fiber4 from "../../assets/products/fiber3.png"
+import fiber5 from "../../assets/products/fiber4.png"
+import { useState } from "react"
 
 export default function Fiber() {
   const {lang} = useParams();
+  const [mainImg,setMainImg] = useState(fiber1);
   return (
     <div className="product">
+      <div className="img-product">
+          <img src={mainImg} alt="" />
+          <div className="img-panel">
+            <img src={fiber1} alt="" loading="lazy" onClick={()=>setMainImg(fiber1)}/>
+            <img src={fiber2} alt="" loading="lazy" onClick={()=>setMainImg(fiber2)}/>
+            <img src={fiber3} alt="" loading="lazy" onClick={()=>setMainImg(fiber3)}/>
+            <img src={fiber4} alt="" loading="lazy" onClick={()=>setMainImg(fiber4)}/>
+            <img src={fiber5} alt="" loading="lazy" onClick={()=>setMainImg(fiber5)}/>
+          </div>
+        </div>
       <div className="about-product">
       <p>
         <strong>{lang === "en" ? "Basalt Fiber" : "Базальтовая фибра"}</strong> – 
@@ -94,9 +110,6 @@ export default function Fiber() {
         <li>{lang === "en" ? "Heat resistance;" : "Термостойкость;"}</li>
         <li>{lang === "en" ? "Ecological friendliness." : "Экологичность."}</li>
       </ul>
-      </div>
-      <div className="img-product sticky-img">
-        <img src={img1} alt="" />
       </div>
     </div>
   )
