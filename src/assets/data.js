@@ -51,6 +51,24 @@ export const data = [
       titleRu: "Базальтовая ткань",
       img: details7
     },
+    {
+      link: "/basalt-direct-roving",
+      titleEn: "Direct Roving",
+      titleRu: "Базальтовая Директ ровинг",
+      img: details7
+    },
+    {
+      link: "/basalt-assembled-roving",
+      titleEn: "Assembled Roving",
+      titleRu: "Ассемблированный базальтовый ровинг",
+      img: details7
+    },
+    {
+      link: "/basalt-twisted-thread",
+      titleEn: "Twisted Thread",
+      titleRu: "крученой  нитъ",
+      img: details7
+    },
   ];
 
   export const langs = [ {lang: "en", img: eng}, {lang: "ru", img: rus}];
