@@ -94,6 +94,7 @@ h3::selection{
 
 .page-title > span {
   font-size: 18px;
+  text-transform: capitalize;
 }
 
 .page-title > span > p {

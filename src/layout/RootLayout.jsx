@@ -15,7 +15,6 @@ import FixedBtn from "../components/FixedBtn";
 export default function RootLayout() {
   const [title, setTitle] = useState({ sectTitle: "", sectProduct: "" });
   const { pathname } = useLocation();
-  const navigate = useNavigate();
   const { lang } = useParams();
   const breadCrumb = pathname.split("/");
 

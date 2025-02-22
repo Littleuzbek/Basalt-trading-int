@@ -226,12 +226,11 @@
         gap: 30px !important;
     }
 
+    .product-card-container,
     .products-page > div{
         padding: 0 15px;
-    }
-
-    .products-page > div{
-        justify-content: center;
+        justify-content: center !important;
+        grid-template-columns: auto !important;
     }
 
     .product{
@@ -280,6 +279,13 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+    .products-page > div{
+        grid-template-columns: auto auto !important;
+        justify-content: space-around !important;
+    }
+}
+
 @media (min-width: 576px) and (max-width: 991px) {
     .contact-page,
     .about-page,
@@ -292,7 +298,9 @@
     
 }
 
-@media (min-width: 992px) and (max-width: 1200px){
+@media (min-width: 991px) and (max-width: 1300px){
+
+    .products-page > div,
     .nav,
     .contact-page,
     .about-page,
@@ -311,6 +319,10 @@
 
     .before-footer > h5 {
         font-size: 35px;
+    }
+
+    .pro-card{
+        width: 250px !important;
     }
 }
 
@@ -402,5 +414,9 @@
     .contactIcon > svg{
         width: 30px;
         height: 30px;
+    }
+
+    .pro-card{
+        width: 350px !important;
     }
 }

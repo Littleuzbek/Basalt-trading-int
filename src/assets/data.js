@@ -23,32 +23,32 @@ export const data = [
     },
     {
       link: "/basalt-fiber",
-      titleEn: "Basalt Wool",
+      titleEn: "Basalt Fiber",
       titleRu: "Базальтовая Фибра",
       img: details3
     },
     {
-      link: "/basalt-geogrid",
-      titleEn: "Basalt Geogrid",
-      titleRu: "Базальтовая Геосетка",
+      link: "/basalt-grid",
+      titleEn: "Basalt Grid",
+      titleRu: "Базальтовая сетка",
       img: details4
     },
     {
       link: "/basalt-composite",
       titleEn: "Basalt Composite Reinforcement",
-      titleRu: "Базальтокомпозитная Арматура",
+      titleRu: "Базальтокомпозитная арматура",
       img: details5
     },
     {
       link: "/basalt-pipe",
       titleEn: "Basalt Pipe",
-      titleRu: "Базальтовая Труба",
+      titleRu: "базальтовые трубы",
       img: details6
     },
     {
       link: "/basalt-fabric",
       titleEn: "Basalt Fabric",
-      titleRu: "Базальтовая Фабрика",
+      titleRu: "Базальтовая ткань",
       img: details7
     },
   ];

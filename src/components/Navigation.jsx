@@ -66,7 +66,7 @@ export default function Navigation() {
                   <NavLink to={`/${lang}/products/basalt-fiber`}>Basalt Fiber</NavLink>
                 </span>
                 <span onClick={(e)=> {e.stopPropagation();}}>
-                  <NavLink to={`/${lang}/products/basalt-geogrid`}>Basalt Geogrid</NavLink>
+                  <NavLink to={`/${lang}/products/basalt-grid`}>Basalt Grid</NavLink>
                 </span>
                 <span onClick={(e)=> {e.stopPropagation();}}>
                   <NavLink to={`/${lang}/products/basalt-composite`}>Basalt Composite Reinforcement</NavLink>
@@ -111,16 +111,16 @@ export default function Navigation() {
               <NavLink to={`/${lang}/products`}
               style={location.pathname.includes("/products") ? {color: "var(--orange)"} : {}}
               >
-                {lang === "en"? "Products" : "Продукция"}
+                {lang === "en"? "Products" : "продукции"}
               </NavLink>
               <span style={location.pathname.includes("/products") ? {backgroundColor: "var(--orange)"} : {}}></span>
               <div className="products-drop-down" onClick={(e)=>e.stopPropagation()}>
                 <Link to={`/${lang}/products/basalt-roving`}>{lang === "en" ? "basalt roving" : "БАЗАЛЬТОВЫЙ РОВИНГ"}</Link>
-                <Link to={`/${lang}/products/basalt-fiber`}>{lang === "en" ? "basalt fiber" : "БАЗАЛЬТОВЫЙ фибра"}</Link>
-                <Link to={`/${lang}/products/basalt-geogrid`}>{lang === "en" ? "basalt geogrid" : "БАЗАЛЬТОВЫЙ геосетка"}</Link>
-                <Link to={`/${lang}/products/basalt-composite`}>{lang === "en" ? "basalt composite reinforcement" : "БАЗАЛЬТОВЫЙ арматура"}</Link>
-                <Link to={`/${lang}/products/basalt-pipe`}>{lang === "en" ? "basalt pipe" : "БАЗАЛЬТОВЫЙ труба"}</Link>
-                <Link to={`/${lang}/products/basalt-fabric`}>{lang === "en" ? "basalt fabric" : "БАЗАЛЬТОВЫЙ фабрика"}</Link>
+                <Link to={`/${lang}/products/basalt-fiber`}>{lang === "en" ? "basalt fiber" : "БАЗАЛЬТОВАЯ  фибра"}</Link>
+                <Link to={`/${lang}/products/basalt-grid`}>{lang === "en" ? "basalt grid" : "БАЗАЛЬТОВАЯ  сетка"}</Link>
+                <Link to={`/${lang}/products/basalt-composite`}>{lang === "en" ? "basalt composite reinforcement" : "БАЗАЛЬТОВАЯ  арматура"}</Link>
+                <Link to={`/${lang}/products/basalt-pipe`}>{lang === "en" ? "basalt pipe" : "базальтовые трубы"}</Link>
+                <Link to={`/${lang}/products/basalt-fabric`}>{lang === "en" ? "basalt fabric" : "БАЗАЛЬТОВАЯ  ТКАНЬ"}</Link>
               </div>
             </div>
             <NavLink to={`${lang}/contact-us`} className="nav-item">
@@ -137,6 +137,7 @@ export default function Navigation() {
               <div className="products-drop-down" onClick={(e)=>e.stopPropagation()}>
                 <Link 
                  to={nextLang}
+                 replace={true}
                  onClick={()=>langHandler(lang === "en" ? "ru" : "en")}>
                   <img src={langs.find((e)=>e.lang !== lang)?.img} alt="" />{langs.find((e)=>e.lang !== lang)?.lang}
                 </Link>

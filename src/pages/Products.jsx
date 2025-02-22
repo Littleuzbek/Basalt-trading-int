@@ -19,13 +19,13 @@ export default function Products() {
         </div>
         <div className="pro-card">
           <img src={pro2} alt="" />
-          <h3>{lang === "en" ? "Basalt Fiber" : "БАЗАЛЬТОВЫЙ фибра"}</h3>
+          <h3>{lang === "en" ? "Basalt Fiber" : "БАЗАЛЬТОВАЯ  фибра"}</h3>
           <Link to="basalt-fiber">{lang === "en" ? "More" : "Подробнее"}</Link>
         </div>
         <div className="pro-card">
           <img src={pro3} alt="" />
-          <h3>{lang === "en" ? "Basalt Geogrid" : "БАЗАЛЬТОВЫЙ геосетка"}</h3>
-          <Link to="basalt-geogrid">
+          <h3>{lang === "en" ? "Basalt grid" : "БАЗАЛЬТОВАЯ  сетка"}</h3>
+          <Link to="basalt-grid">
             {lang === "en" ? "More" : "Подробнее"}
           </Link>
         </div>
@@ -33,8 +33,8 @@ export default function Products() {
           <img src={pro4} alt="" />
           <h3>
             {lang === "en"
-              ? "Basalt Composite reinforcement"
-              : "БАЗАЛЬТОВЫЙ арматура"}
+              ? "Basalt Composite Reinforcement"
+              : "БАЗАЛЬТОВАЯ  арматура"}
           </h3>
           <Link to="basalt-composite">
             {lang === "en" ? "More" : "Подробнее"}
@@ -42,12 +42,12 @@ export default function Products() {
         </div>
         <div className="pro-card">
           <img src={pro5} alt="" />
-          <h3>{lang === "en" ? "Basalt Pipe" : "БАЗАЛЬТОВЫЙ труба"}</h3>
+          <h3>{lang === "en" ? "Basalt Pipe" : "базальтовые  трубы"}</h3>
           <Link to="basalt-pipe">{lang === "en" ? "More" : "Подробнее"}</Link>
         </div>
         <div className="pro-card">
           <img src={pro6} alt="" />
-          <h3>{lang === "en" ? "Basalt Fabric" : "БАЗАЛЬТОВЫЙ фабрика"}</h3>
+          <h3>{lang === "en" ? "Basalt Fabric" : "БАЗАЛЬТОВАЯ  ткань"}</h3>
           <Link to="basalt-fabric">{lang === "en" ? "More" : "Подробнее"}</Link>
         </div>
       </div>
