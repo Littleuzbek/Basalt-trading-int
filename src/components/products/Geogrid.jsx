@@ -45,7 +45,7 @@ export default function Geogrid() {
         </div>
       </div>
 
-      <div className="related-products">
+      <div className="related-products grid-related">
         <div className="pro-card">
           <img src={img2} alt="" />
           <h3>{lang === "en" ? "Universal" : "Универсал"}</h3>

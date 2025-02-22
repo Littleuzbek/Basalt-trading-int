@@ -35,7 +35,7 @@ export default function Composite2() {
         <div className="pro-card">
           <img src={img1} alt="" />
           <h3>{lang === "en" ? "Reinforcement Mesh" : "АРМОСЕТКА"}</h3>
-          <Link to={`/${lang}/products/basalt-reinforcement-mesh`}>
+          <Link to={`/${lang}/products/basalt-composite-rebar`}>
             {lang === "en" ? "More" : "Подробнее"}
           </Link>
         </div>

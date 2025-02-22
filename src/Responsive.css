@@ -250,8 +250,12 @@
 
     .related-products{
         width: 100%;
+        grid-template-columns: auto !important  ;
+        justify-content: center !important;
+    }
+
+    .roving-reladted{
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
     
@@ -293,6 +297,11 @@
 
     .related-products {
         flex-direction: row;
+    }
+
+    .grid-related{
+        grid-template-columns: auto auto !important;
+        justify-content: space-around !important
     }
 }
 

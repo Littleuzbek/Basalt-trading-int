@@ -33,7 +33,7 @@ export default function Roving() {
       </div>
     </div>
 
-    <div className="related-products">
+    <div className="related-products roving-reladted">
         <div className="pro-card">
             <img src={img1} alt="" />
             <h3>{lang === "en" ? "Direct Roving" : "Директ РОВИНГ"}</h3>
