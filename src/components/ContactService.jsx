@@ -17,7 +17,7 @@ export default function ContactService() {
       <span>
         <IoCall />
         <p>{lang === "en" ? "Call Us" : "Позвоните нам"}: </p>
-        <p>Soon...</p>
+        <p>+998 90 027 40 00</p>
       </span>
 
       <span>

@@ -13,7 +13,7 @@ export default function Footer() {
                 {lang === "en" ? "EMAIL ADDRESS" : "ЭЛЕКТРОННОЙ ПОЧТЫ"}
             </h4>
             <a href="/" className="Footer_info-style">
-            info@biet.uz
+                info@biet.uz
             </a>
            </div>
 
@@ -31,7 +31,7 @@ export default function Footer() {
                 INSTAGRAM
             </h4>
             <p>
-                Soon...
+                {lang === "en" ? "Soon..." : "Скоро..."}
             </p>
            </div>
 
@@ -40,7 +40,7 @@ export default function Footer() {
                 FACEBOOK
             </h4>
             <p>
-                Soon...
+                {lang === "en" ? "Soon..." : "Скоро..."}
             </p>
            </div>
 

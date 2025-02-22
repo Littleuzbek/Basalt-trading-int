@@ -22,7 +22,7 @@ export default function ContactUs() {
           </div>
           <div className="contactText">
             <p>{lang === "en" ? "Don't hesitate to contact us" : "Не стесняйтесь обращаться к нам"}!</p>
-            <p>Soon...</p>
+            <p>+998 90 027 40 00</p>
           </div>
         </span>
         <span className="contact-category">
@@ -40,7 +40,7 @@ export default function ContactUs() {
           </div>
           <div className="contactText">
             <p>{lang === "en" ? "Company Location" : "Расположение компании"}:</p>
-            <p>Ташкент город Ц1  БИЙ 45а </p>
+            <p>{lang === "en" ? "Tashkent city C1 BIY 45a" : "Ташкент город Ц1  БИЙ 45а"} </p>
           </div>
         </span>
         <span className="contact-category">

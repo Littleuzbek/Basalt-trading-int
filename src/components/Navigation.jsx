@@ -63,7 +63,7 @@ export default function Navigation() {
                   <NavLink to={`/${lang}/products/basalt-roving`}>Basalt Roving</NavLink>
                 </span>
                 <span  onClick={(e)=> {e.stopPropagation();}}>
-                  <NavLink to={`/${lang}/products/basalt-fiber`}>Basalt Fiber</NavLink>
+                  <NavLink to={`/${lang}/products/basalt-fiber`}>Basalt Chopped Fiber</NavLink>
                 </span>
                 <span onClick={(e)=> {e.stopPropagation();}}>
                   <NavLink to={`/${lang}/products/basalt-grid`}>Basalt Grid</NavLink>
@@ -116,7 +116,7 @@ export default function Navigation() {
               <span style={location.pathname.includes("/products") ? {backgroundColor: "var(--orange)"} : {}}></span>
               <div className="products-drop-down" onClick={(e)=>e.stopPropagation()}>
                 <Link to={`/${lang}/products/basalt-roving`}>{lang === "en" ? "basalt roving" : "БАЗАЛЬТОВЫЙ РОВИНГ"}</Link>
-                <Link to={`/${lang}/products/basalt-fiber`}>{lang === "en" ? "basalt fiber" : "БАЗАЛЬТОВАЯ  фибра"}</Link>
+                <Link to={`/${lang}/products/basalt-fiber`}>{lang === "en" ? "basalt chopped fiber" : "БАЗАЛЬТОВАЯ  фибра"}</Link>
                 <Link to={`/${lang}/products/basalt-grid`}>{lang === "en" ? "basalt grid" : "БАЗАЛЬТОВАЯ  сетка"}</Link>
                 <Link to={`/${lang}/products/basalt-composite`}>{lang === "en" ? "basalt composite reinforcement" : "БАЗАЛЬТОВАЯ  арматура"}</Link>
                 <Link to={`/${lang}/products/basalt-pipe`}>{lang === "en" ? "basalt pipe" : "базальтовые трубы"}</Link>
