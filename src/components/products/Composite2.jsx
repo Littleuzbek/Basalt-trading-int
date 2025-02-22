@@ -1,14 +1,27 @@
 import { Link, useParams } from "react-router";
 import img1 from "../../assets/products/composite.png";
-import img2 from "../../assets/products/pro-about-composite.jpg";
+import mesh1 from "../../assets/products/mesh1.png";
+import mesh2 from "../../assets/products/mesh2.png";
+import mesh3 from "../../assets/products/mesh3.png";
+import mesh4 from "../../assets/products/mesh4.png";
+import mesh5 from "../../assets/products/mesh5.png";
+import { useState } from "react";
 
 export default function Composite2() {
   const {lang} = useParams();
+  const [mainImg,setMainImg] = useState(mesh1);
   return (
     <>
     <div className="product">
       <div className="img-product">
-        <img src={img2} alt="" />
+        <img src={mainImg} alt="" />
+        <div className="img-panel">
+            <img src={mesh1} alt="" loading="lazy" onClick={()=>setMainImg(mesh1)}/>
+            <img src={mesh2} alt="" loading="lazy" onClick={()=>setMainImg(mesh2)}/>
+            <img src={mesh3} alt="" loading="lazy" onClick={()=>setMainImg(mesh3)}/>
+            <img src={mesh4} alt="" loading="lazy" onClick={()=>setMainImg(mesh4)}/>
+            <img src={mesh5} alt="" loading="lazy" onClick={()=>setMainImg(mesh5)}/>
+        </div>
       </div>
       <div className="about-product">
         <p>

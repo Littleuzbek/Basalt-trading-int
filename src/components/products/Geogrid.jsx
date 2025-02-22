@@ -9,11 +9,14 @@ export default function Geogrid() {
   return (
     <>
       <div className="product">
+        <div className="img-product sticky-img">
+          <img src={img1} alt="" />
+        </div>
         <div className="about-product">
           <p>
             <strong>
               {lang === "en"
-                ? "Plaster/Facade basalt geogrid"
+                ? "Plaster/Facade basalt grid"
                 : "Штукатурная/Фасадная базальтовая сетка"}
             </strong>{" "}
             —
@@ -39,9 +42,6 @@ export default function Geogrid() {
               ? "Plaster/Facade Geogrid is easy to install and is compatible with most building materials. Its use helps to create a strong, even and stable surface for further finishing, be it painting, applying decorative plaster or installing cladding panels. The use of mesh also contributes to the even distribution of loads, which prevents deformation of finishing layers and prolongs their aesthetic appearance."
               : "Штукатурная/Фасадная сетка легко монтируется и совместима с большинством строительных материалов. Её использование помогает создать прочную ровную и стабильную поверхность для дальнейшей отделки, будь то покраска, нанесение декоративной штукатурки или монтаж облицовочных панелей. Применение сетки также способствует равномерному распределению нагрузок, что предотвращает деформацию отделочных слоёв и продлевает их эстетический вид."}
           </p>
-        </div>
-        <div className="img-product sticky-img">
-          <img src={img1} alt="" />
         </div>
       </div>
 

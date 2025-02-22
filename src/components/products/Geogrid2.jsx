@@ -9,6 +9,9 @@ export default function Geogrid() {
   return (
     <>
       <div className="product">
+        <div className="img-product sticky-img">
+          <img src={img3} alt="" />
+        </div>
         <div className="about-product">
           <p>
             <strong>
@@ -39,9 +42,6 @@ export default function Geogrid() {
               ? "Easy installation and minimal maintenance costs make basalt geogrid a cost-effective solution. It can be easily laid on a prepared base without the need for sophisticated equipment or special skills. This significantly reduces the time required to complete the work, ensuring a high result at minimal cost."
               : "Простота монтажа и минимальные эксплуатационные расходы делают базальтовую геосетку экономически выгодным решением. Она легко укладывается на подготовленное основание, не требуя применения сложной техники или специальных навыков. Это существенно сокращает сроки выполнения работ, обеспечивая высокий результат с минимальными затратами."}
           </p>
-        </div>
-        <div className="img-product sticky-img">
-          <img src={img3} alt="" />
         </div>
       </div>
 

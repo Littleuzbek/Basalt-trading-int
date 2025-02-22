@@ -5,6 +5,9 @@ export default function Pipe() {
   const {lang} = useParams();
   return (
     <div className="product">
+      <div className="img-product sticky-img">
+        <img src={img1} alt="" />
+      </div>
       <div className="about-product">
       <p>
         <strong>{lang === "en" ? "Basalt pipe" : "Базальтовые трубы"}</strong>  
@@ -46,9 +49,6 @@ export default function Pipe() {
         <li>{lang === "en" ? "Can be used in any environment;" : "Возможность применения в любой среде;"}</li>
         <li>{lang === "en" ? "Environmentally friendly.;" : "Экологичность."}</li>
       </ul>
-      </div>
-      <div className="img-product sticky-img">
-        <img src={img1} alt="" />
       </div>
     </div>
   );

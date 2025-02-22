@@ -1,11 +1,27 @@
 import { useParams } from "react-router"
-import img1 from "../../assets/products/fabric.png"
+import fabric1 from "../../assets/products/fabric5.png"
+import fabric2 from "../../assets/products/fabric1.png"
+import fabric3 from "../../assets/products/fabric2.png"
+import fabric4 from "../../assets/products/fabric3.png"
+import fabric5 from "../../assets/products/fabric4.png"
+import { useState } from "react";
 
 export default function Fabric() {
   const {lang} = useParams();
+  const [mainImg,setMainImg] = useState(fabric1);
   return (
     <div>
     <div className="product">
+      <div className="img-product">
+        <img src={mainImg} alt="" />
+        <div className="img-panel">
+            <img src={fabric1} alt="" loading="lazy" onClick={()=>setMainImg(fabric1)}/>
+            <img src={fabric2} alt="" loading="lazy" onClick={()=>setMainImg(fabric2)}/>
+            <img src={fabric3} alt="" loading="lazy" onClick={()=>setMainImg(fabric3)}/>
+            <img src={fabric4} alt="" loading="lazy" onClick={()=>setMainImg(fabric4)}/>
+            <img src={fabric5} alt="" loading="lazy" onClick={()=>setMainImg(fabric5)}/>
+        </div>
+      </div>
       <div className="about-product">
       <p>
         <strong>{lang === "en" ? "Базальтовая ткань" : "Basalt fabric"}</strong> – 
@@ -34,9 +50,6 @@ export default function Fabric() {
         <li>{lang === "en" ? "Vacuum Infusion.;" : "Вакуумная инфузия.;"}</li>
       </ol>
 
-      </div>
-      <div className="img-product sticky-img">
-        <img src={img1} alt="" />
       </div>
     </div>
     </div>

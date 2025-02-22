@@ -1,12 +1,22 @@
 import { Link, useParams } from "react-router";
-import img1 from "../../assets/products/composite.png";
+import rebar1 from "../../assets/products/composite.png";
+import rebar2 from "../../assets/products/rebar.png";
 import img2 from "../../assets/products/pro-about-composite.jpg";
+import { useState } from "react";
 
 export default function Composite() {
   const { lang } = useParams();
+  const [mainImg, setMainImg] = useState(rebar1);
   return (
     <>
       <div className="product">
+      <div className="img-product">
+        <img src={mainImg} alt="" />
+        <div className="img-panel">
+            <img src={rebar1} alt="" loading="lazy" onClick={()=>setMainImg(rebar1)}/>
+            <img src={rebar2} alt="" loading="lazy" onClick={()=>setMainImg(rebar2)}/>
+        </div>
+      </div>
         <div className="about-product">
           <p>
             <strong>
@@ -87,9 +97,6 @@ export default function Composite() {
                 : "Долговечность и экономичность, так как базальтокомпозитная арматура обладает высокой устойчивостью к коррозии и не требует регулярной замены."}
             </li>
           </ul>
-        </div>
-        <div className="img-product sticky-img">
-          <img src={img1} alt="" />
         </div>
       </div>
 
