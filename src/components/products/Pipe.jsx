@@ -1,12 +1,23 @@
 import { useParams } from "react-router";
-import img1 from "../../assets/products/pipe.png";
+import pipe1 from "../../assets/products/pipe1.png";
+import pipe2 from "../../assets/products/pipe2.jpg";
+import pipe3 from "../../assets/products/pipe3.jpg";
+import pipe4 from "../../assets/products/pipe4.jpg";
+import { useState } from "react";
 
 export default function Pipe() {
   const {lang} = useParams();
+  const [mainImg,setMainImg] = useState(pipe1);
   return (
     <div className="product">
-      <div className="img-product sticky-img">
-        <img src={img1} alt="" />
+      <div className="img-product">
+        <img src={mainImg} alt="" />
+        <div className="img-panel pipe-panel">
+            <img src={pipe1} alt="" loading="lazy" onClick={()=>setMainImg(pipe1)}/>
+            <img src={pipe2} alt="" loading="lazy" onClick={()=>setMainImg(pipe2)}/>
+            <img src={pipe3} alt="" loading="lazy" onClick={()=>setMainImg(pipe3)} />
+            <img src={pipe4} alt="" loading="lazy" onClick={()=>setMainImg(pipe4)} />
+        </div>
       </div>
       <div className="about-product">
       <p>

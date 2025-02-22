@@ -123,6 +123,15 @@
     user-select: none;
 }
 
+.pipe-panel{
+    margin: 50px 0 0;
+}
+
+.pipe-panel > img{
+    object-fit: cover;
+    height: 150px;
+}
+
 .related-products{
     display: grid;
     gap: 50px

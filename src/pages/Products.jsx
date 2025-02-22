@@ -19,7 +19,7 @@ export default function Products() {
         </div>
         <div className="pro-card">
           <img src={pro2} alt="" />
-          <h3>{lang === "en" ? "Basalt Fiber" : "БАЗАЛЬТОВАЯ  фибра"}</h3>
+          <h3>{lang === "en" ? "Basalt Chopped Fiber" : "БАЗАЛЬТОВАЯ  фибра"}</h3>
           <Link to="basalt-fiber">{lang === "en" ? "More" : "Подробнее"}</Link>
         </div>
         <div className="pro-card">

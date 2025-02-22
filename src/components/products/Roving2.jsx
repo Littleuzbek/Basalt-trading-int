@@ -1,6 +1,5 @@
 import { Link, useParams } from "react-router";
 import img1 from "../../assets/products/pro-about-roving1.png";
-import img2 from "../../assets/products/pro-about-roving2.png";
 import img3 from "../../assets/products/pro-about-roving3.png";
 import roving1 from "../../assets/products/assem-roving1.png";
 import roving2 from "../../assets/products/assem-roving2.png";

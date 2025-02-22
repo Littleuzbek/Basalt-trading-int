@@ -1,17 +1,30 @@
 import { Link, useParams } from "react-router";
 import img1 from "../../assets/products/pro-about-geogrid1.jpg";
 import img2 from "../../assets/products/pro-about-geogrid2.jpg";
-import img3 from "../../assets/products/pro-about-geogrid3.jpg";
 import img4 from "../../assets/products/pro-about-geogrid4.jpg";
+import mesh1 from "../../assets/products/pro-about-geogrid3.jpg";
+import mesh2 from "../../assets/products/mesh2.png";
+import mesh3 from "../../assets/products/mesh1.png";
+import mesh4 from "../../assets/products/mesh4.png";
+import mesh5 from "../../assets/products/mesh5.png";
+import { useState } from "react";
 
 export default function Geogrid() {
   const { lang } = useParams();
+  const [mainImg,setMainImg] = useState(mesh1);
   return (
     <>
       <div className="product">
-        <div className="img-product sticky-img">
-          <img src={img3} alt="" />
+      <div className="img-product">
+        <img src={mainImg} alt="" />
+        <div className="img-panel">
+            <img src={mesh1} alt="" loading="lazy" onClick={()=>setMainImg(mesh1)} style={{height: "100px", alignSelf: "center"}}/>
+            <img src={mesh2} alt="" loading="lazy" onClick={()=>setMainImg(mesh2)}/>
+            <img src={mesh3} alt="" loading="lazy" onClick={()=>setMainImg(mesh3)}/>
+            <img src={mesh4} alt="" loading="lazy" onClick={()=>setMainImg(mesh4)}/>
+            <img src={mesh5} alt="" loading="lazy" onClick={()=>setMainImg(mesh5)}/>
         </div>
+      </div>
         <div className="about-product">
           <p>
             <strong>
