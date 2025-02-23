@@ -8,7 +8,7 @@ import mesh2 from "../../assets/products/mesh2.png";
 import mesh3 from "../../assets/products/mesh1.png";
 import mesh4 from "../../assets/products/mesh4.png";
 import mesh5 from "../../assets/products/mesh5.png";
-import { MdOutlineNavigateNext } from "react-icons/md";
+// import { MdOutlineNavigateNext } from "react-icons/md";
 
 export default function Geogrid() {
   const { lang } = useParams();
@@ -42,10 +42,10 @@ export default function Geogrid() {
             <img src={mesh4} alt="" loading="lazy" onClick={()=>setMainImg(mesh4)}/>
             <img src={mesh5} alt="" loading="lazy" onClick={()=>setMainImg(mesh5)}/>
         </div>
-        <div className="control-panel">
+        {/* <div className="control-panel">
           <MdOutlineNavigateNext onClick={()=> prevImg( arr?.findIndex((img)=> mainImg === img) )}/>
           <MdOutlineNavigateNext onClick={()=> nextImg( arr?.findIndex((img)=> mainImg === img) )}/>
-        </div>
+        </div> */}
       </div>
         <div className="about-product">
           <p>
