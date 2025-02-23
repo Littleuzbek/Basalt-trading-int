@@ -242,6 +242,7 @@
         width: auto !important;
         justify-content: center;
         position: static !important;
+        margin: 0 0 20px !important;
     }
     
     .about-product{
@@ -285,10 +286,18 @@
     .img-product > img{
         height: 150px;
     }
+
+    .img-panel{
+        display: none !important;
+    }
     
     .img-panel > img{
         width: 60px !important;
         height: 60px !important;
+    }
+
+    .control-panel{
+        display: flex !important;
     }
 }
 

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router";
 import img1 from "../../assets/products/pro-about-geogrid1.jpg";
 import img2 from "../../assets/products/pro-about-geogrid2.jpg";
@@ -7,11 +8,28 @@ import mesh2 from "../../assets/products/mesh2.png";
 import mesh3 from "../../assets/products/mesh1.png";
 import mesh4 from "../../assets/products/mesh4.png";
 import mesh5 from "../../assets/products/mesh5.png";
-import { useState } from "react";
+import { MdOutlineNavigateNext } from "react-icons/md";
 
 export default function Geogrid() {
   const { lang } = useParams();
   const [mainImg,setMainImg] = useState(mesh1);
+  const arr = [mesh1, mesh2, mesh3, mesh4, mesh5];
+
+  const nextImg = (index) => {
+    if(index === arr.length - 1){
+      setMainImg( arr?.at(0) )
+    }else{
+      setMainImg( arr?.at(index + 1) )
+    }
+  }
+
+  const prevImg = (index) => {
+    if(index === 0){
+      setMainImg( arr?.at(-1) )
+    }else{
+      setMainImg( arr?.at(index - 1) )
+    }
+  }
   return (
     <>
       <div className="product">
@@ -23,6 +41,10 @@ export default function Geogrid() {
             <img src={mesh3} alt="" loading="lazy" onClick={()=>setMainImg(mesh3)}/>
             <img src={mesh4} alt="" loading="lazy" onClick={()=>setMainImg(mesh4)}/>
             <img src={mesh5} alt="" loading="lazy" onClick={()=>setMainImg(mesh5)}/>
+        </div>
+        <div className="control-panel">
+          <MdOutlineNavigateNext onClick={()=> prevImg( arr?.findIndex((img)=> mainImg === img) )}/>
+          <MdOutlineNavigateNext onClick={()=> nextImg( arr?.findIndex((img)=> mainImg === img) )}/>
         </div>
       </div>
         <div className="about-product">
